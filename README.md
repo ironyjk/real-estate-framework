@@ -29,7 +29,7 @@ real-estate-frameworks/
 ## 사용
 
 ```
-/real-estate <상황 설명>
+/realty <상황 설명>
 ```
 
 메타 라우터가 문제를 분류하고, 관련 프레임워크(들)를 호출하여 분석을 합성한다.

@@ -1,5 +1,5 @@
 ---
-name: real-estate
+name: realty
 version: "0.1.0"
 description: "한국 부동산 메타 라우터 — 상황을 분류하고 학계 이론/투자 분석/한국 제도 프레임워크 중 적절한 것(들)을 자동 선택해 의사결정을 돕는다. 갈아타기·매수·청약·재건축·갭투자·상업용 분석을 커버."
 tools: ["Read", "Write", "Edit", "Skill"]
@@ -171,8 +171,8 @@ Return: [정량 결과 / 정성 구조 / 체크리스트 중 원하는 형식]
 
 부동산 의사결정은 종종 더 넓은 맥락에서 판단해야 함:
 
-- **`investment`** — 부동산은 포트폴리오 자산 class 중 하나. 전체 자산 배분(주식·채권·부동산·현금 비중)·리밸런싱·FIRE 계획은 `investment` 레포의 `all-weather`·`bogleheads`·`modern-portfolio-theory`·`fire-korean`으로. 특히 갈아타기가 "집 한 채 몰빵"인지 검토할 때.
-- **`learning-framework`** — 본 레포 자체가 한국 부동산 학습의 MOC(Map of Content)로 사용 가능. 6개월+ 깊이 공부할 때 `learning-framework`의 `metalearning`·`zettelkasten`과 함께 쓰면 *원자 노트를 이 레포의 프레임워크에 매핑*하는 방식으로 체계화 가능.
+- **`money`** — 부동산은 포트폴리오 자산 class 중 하나. 전체 자산 배분(주식·채권·부동산·현금 비중)·리밸런싱·FIRE 계획은 `money` 레포의 `all-weather`·`bogleheads`·`modern-portfolio-theory`·`fire-korean`으로. 특히 갈아타기가 "집 한 채 몰빵"인지 검토할 때.
+- **`learn`** — 본 레포 자체가 한국 부동산 학습의 MOC(Map of Content)로 사용 가능. 6개월+ 깊이 공부할 때 `learn`의 `metalearning`·`zettelkasten`과 함께 쓰면 *원자 노트를 이 레포의 프레임워크에 매핑*하는 방식으로 체계화 가능.
 
 ## 원칙
 
