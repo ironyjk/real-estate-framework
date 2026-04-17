@@ -65,3 +65,7 @@ For situations requiring evaluation of real estate + financial assets together f
 - Korean tax (acquisition tax · capital gains tax · comprehensive real estate tax), HUG guarantee rates, and redevelopment regulations are current as of 2026-04-17 and change frequently. Always verify with a tax accountant, licensed real estate agent, or legal professional before any transaction.
 - This repo does not engage in activities classified as "유사투자자문업" under Korean capital markets law — no specific tickers, weightings, or timing recommendations. Only thinking structures and frameworks are provided.
 - Past cycles and prices do not guarantee future results. All frameworks here are *models that can be wrong*.
+
+## License
+
+CC-BY-NC-4.0 — see [LICENSE](LICENSE) for details. Commercial licensing: ironyjk@gmail.com
