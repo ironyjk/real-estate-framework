@@ -1,63 +1,67 @@
 # Real Estate Framework
 
-한국 부동산 의사결정을 위한 메타 라우터 + 프레임워크 컬렉션.
+[한국어](README.ko.md) | **English**
 
-학계 이론(Hedonic, DiPasquale-Wheaton, Alonso-Muth-Mills), 투자 분석(Cap Rate/DCF, Harrison 18.6년 사이클, Highest & Best Use), 한국 제도 프레임워크(재건축 사업성, 청약 가점제, 갭투자 구조)를 하나의 라우팅 레이어 아래에 묶는다.
+---
 
-## 설계 원칙
+A meta-router + framework collection for Korean real estate decision-making.
 
-1. **영어권 이론을 한국 시장 맥락으로 번역** — 이론 복붙 금지. 전세 제도, 청약 규제, 재건축 절차 등 한국 특수 요인이 반영돼야 함.
-2. **리테일 투자자 직감과 학계 실증 사이의 다리** — "불패 신화" vs "일본화 논리" 같은 서사가 아니라 데이터와 제도로 판단.
-3. **의사결정 보조 도구** — 정답 자판기가 아니라 사고 프레임 제공.
+Bundles academic theory (Hedonic pricing, DiPasquale-Wheaton, Alonso-Muth-Mills), investment analysis (Cap Rate/DCF, Harrison 18.6-year cycle, Highest & Best Use), and Korean institutional frameworks (redevelopment feasibility, subscription-point strategy, gap investment structure) under a single routing layer.
 
-## 구조
+## Design Principles
+
+1. **Translate English-language theory into the Korean market context** — No copy-paste theory. Must reflect Korea-specific factors: jeonse (전세) system, subscription regulations (청약 규제), redevelopment procedures (재건축 절차), etc.
+2. **Bridge between retail investor intuition and academic empirics** — Decisions by data and institutions, not narratives like "real estate always wins" vs. "Japan-style stagnation."
+3. **Decision support, not answer machine** — Provides thinking frames, not verdicts.
+
+## Structure
 
 ```
 real-estate-framework/
-├── SKILL.md               # 메타 라우터 — 상황 → 프레임워크 선택
-├── hedonic-pricing/       # 속성별 가격 분해
-├── dipasquale-wheaton/    # 4분면 모델 (임대·자산·건설·재고)
-├── alonso-muth-mills/     # 도심 접근성 vs 가격
-├── cap-rate-dcf/          # 수익형 가치 평가
-├── harrison-cycle/        # 18.6년 부동산 사이클
-├── highest-best-use/      # 최유효이용 원칙
-├── redevelopment-feasibility/  # 재건축 사업성 (비례율·분담금)
-├── subscription-points/   # 청약 가점제 전략
-└── gap-investment/        # 전세 레버리지 구조
+├── SKILL.md               # Meta-router — situation → framework selection
+├── hedonic-pricing/       # Price decomposition by attribute
+├── dipasquale-wheaton/    # 4-quadrant model (rental · asset · construction · stock)
+├── alonso-muth-mills/     # Urban accessibility vs. price
+├── cap-rate-dcf/          # Income-property valuation
+├── harrison-cycle/        # 18.6-year real estate cycle
+├── highest-best-use/      # Highest & best use principle
+├── redevelopment-feasibility/  # Redevelopment feasibility (비례율·분담금)
+├── subscription-points/   # Korean subscription scoring strategy (청약 가점제)
+└── gap-investment/        # Jeonse leverage structure (갭투자)
 ```
 
-## 사용
+## Usage
 
 ```
-/realty <상황 설명>
+/realty <situation description>
 ```
 
-메타 라우터가 문제를 분류하고, 관련 프레임워크(들)를 호출하여 분석을 합성한다.
+The meta-router classifies the problem and calls relevant framework(s) to synthesize the analysis.
 
-> 💡 **짧은 이름**: [래퍼 설정](https://github.com/ironyjk/claude-frameworks-marketplace#짧은-이름으로-쓰기-optional) 후 `/realty`로 호출 가능
+> 💡 **Short name**: after [wrapper setup](https://github.com/ironyjk/claude-frameworks-marketplace#short-command-setup-optional), callable as `/realty`
 
-## 범위 바깥
+## Out of Scope
 
-- 개별 매물 추천·감정평가
-- 단기 매매 시그널·호가 예측
-- 주식·채권 기반 포트폴리오 (→ [`money`](https://github.com/ironyjk/investment-framework))
-- 사업 전략 (→ `think`)
-- 심리·감정 상담 (→ `counsel`)
+- Individual property recommendations or appraisals
+- Short-term trading signals or price predictions
+- Stock/bond portfolio management (→ [`money`](https://github.com/ironyjk/investment-framework))
+- Business strategy (→ `think`)
+- Psychological / emotional counseling (→ `counsel`)
 
-## 자매 레포
+## Sister Repo
 
-자산 배분 관점에서 부동산 + 금융 자산을 함께 놓고 판단해야 하는 상황(예: "전세금 뺀 2억을 ETF에 넣어야 할지")은 [`investment-framework`](https://github.com/ironyjk/investment-framework)(`/money`)와 함께 쓰는 것을 권장.
+For situations requiring evaluation of real estate + financial assets together from an asset-allocation perspective (e.g., "Should I put the 200M KRW freed from jeonse into ETFs?"), pair with [`investment-framework`](https://github.com/ironyjk/investment-framework) (`/money`).
 
-## 메타
+## Meta
 
 - `last_verified: 2026-04-17`
-- `valid_until: 2026-10-17` — 한국 세제·HUG 보증요율·재건축 규제는 6개월 내 재검증 필요
+- `valid_until: 2026-10-17` — Korean tax rules (acquisition tax, capital gains, comprehensive real estate tax), HUG guarantee rates, and redevelopment regulations require re-verification within 6 months.
 
-## 면책
+## Disclaimer
 
-**이 레포는 의사결정 보조 도구이며 부동산 자문·투자 자문이 아니다.**
+**This repo is a decision-support tool, not real estate or investment advice.**
 
-- 특정 단지·지역·매물을 추천하지 않으며, 매수·매도 결정은 전적으로 사용자 책임이다.
-- 한국 세제(취득세·양도세·종부세)·HUG 보증요율·재건축 규제는 2026-04-17 기준이며, 수시 변경된다. 실제 거래 전 세무사·공인중개사·법무사와 반드시 확인하라.
-- 이 레포는 자본시장법상 "유사투자자문업"에 해당하는 특정 종목·비중·타이밍 권고를 하지 않는다. 사고 구조·프레임만 제공한다.
-- 과거 사이클·가격은 미래를 보장하지 않는다. 여기 적힌 모든 프레임워크는 *틀릴 수 있는 모형*이다.
+- No specific complexes, regions, or properties are recommended; all buy/sell decisions are entirely the user's responsibility.
+- Korean tax (acquisition tax · capital gains tax · comprehensive real estate tax), HUG guarantee rates, and redevelopment regulations are current as of 2026-04-17 and change frequently. Always verify with a tax accountant, licensed real estate agent, or legal professional before any transaction.
+- This repo does not engage in activities classified as "유사투자자문업" under Korean capital markets law — no specific tickers, weightings, or timing recommendations. Only thinking structures and frameworks are provided.
+- Past cycles and prices do not guarantee future results. All frameworks here are *models that can be wrong*.
