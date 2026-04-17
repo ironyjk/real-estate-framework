@@ -9,8 +9,16 @@
   "homepage": "https://github.com/ironyjk/real-estate-framework",
   "repository": "https://github.com/ironyjk/real-estate-framework",
   "license": "CC-BY-NC-4.0",
-  "keywords": ["real-estate", "korean", "jeonse", "hedonic", "harrison-cycle", "redevelopment"],
+  "keywords": [
+    "real-estate",
+    "korean",
+    "jeonse",
+    "hedonic",
+    "harrison-cycle",
+    "redevelopment"
+  ],
   "skills": [
+    "./realty",
     "./alonso-muth-mills",
     "./cap-rate-dcf",
     "./dipasquale-wheaton",
