@@ -34,6 +34,8 @@ real-estate-framework/
 
 메타 라우터가 문제를 분류하고, 관련 프레임워크(들)를 호출하여 분석을 합성한다.
 
+> 💡 **짧은 이름**: [래퍼 설정](https://github.com/ironyjk/claude-frameworks-marketplace#짧은-이름으로-쓰기-optional) 후 `/realty`로 호출 가능
+
 ## 범위 바깥
 
 - 개별 매물 추천·감정평가
