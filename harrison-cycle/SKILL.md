@@ -1,161 +1,161 @@
 ---
 name: harrison-cycle
 version: "0.1.0"
-description: "Harrison 18.6년 부동산 사이클 — 토지 가격이 경제 사이클을 주도한다는 가설. 14년 상승 + 4년 하락 패턴. 한국 적용 가능성과 한계, 현재 사이클 위치 판단."
+description: "Harrison 18.6-Year Property Cycle — the hypothesis that land prices drive the economic cycle. A pattern of 14 years up + 4 years down. Applicability to Korea, limitations, and assessment of the current cycle position."
 ---
 
 # Harrison 18.6-Year Property Cycle
 
-## 한 줄 요약
+## One-Line Summary
 
-부동산 시장은 평균 **18.6년 주기**로 움직인다. 14년 상승(7년 완만 + 7년 급등 = "Winner's Curse" 구간) + 4년 급락 + 2년 회복. 이 가설이 맞다면 *타이밍* 판단의 거칠한 틀.
+Real estate markets move on an average **18.6-year cycle**. 14 years up (7 years of mild growth + 7 years of surge = the "Winner's Curse" phase) + 4 years of sharp decline + 2 years of recovery. If this hypothesis holds, it is a rough framework for *timing* judgments.
 
-## 이론 기원
+## Origin of the Theory
 
-- **Homer Hoyt (1933)** — *One Hundred Years of Land Values in Chicago*. 100년 사이클 실증.
-- **Fred Harrison** — *The Power in the Land* (1983), *Boom Bust* (2005). Hoyt 패턴을 18.6년으로 정리, 2008 위기 사전 경고로 유명해짐.
-- **Phillip J. Anderson** — *The Secret Life of Real Estate and Banking* (2009). 미국 데이터로 확장.
-- Henry George의 토지 단일세 이론이 철학적 바탕.
+- **Homer Hoyt (1933)** — *One Hundred Years of Land Values in Chicago*. Empirical demonstration of a 100-year cycle.
+- **Fred Harrison** — *The Power in the Land* (1983), *Boom Bust* (2005). Organized Hoyt's pattern into an 18.6-year cycle; became famous for his advance warning of the 2008 crisis.
+- **Phillip J. Anderson** — *The Secret Life of Real Estate and Banking* (2009). Extended the analysis with U.S. data.
+- Henry George's single-tax theory on land provides the philosophical foundation.
 
-## 학계 위치 (먼저 읽을 것)
+## Academic Standing (Read This First)
 
-- 주류 경제학에서 "18.6년 주기"는 **실증적으로 검증되지 않은 가설**. Hoyt(1933)의 시카고 단일 도시 사례를 Harrison이 일반화한 것.
-- 실증 연구들 (Shiller 2015; Case-Shiller 지수; IMF Global Housing Watch)은 *주기성 자체*는 인정하나 **정확한 18.6년 주기는 기각**. 실제 사이클은 **국가·지역별 12~25년 범위**로 편차.
-- 2008은 적중했지만 "달 궤도 연동" 같은 설명은 **사후 정당화**. 인과 메커니즘(신용 팽창·토지 투기)은 **Minsky 금융불안정 가설**로 더 엄밀히 설명됨.
-- **이 프레임워크의 유효한 쓰임**: 정밀한 타이밍 예측이 아니라 "장기 사이클이 있을 수 있다"는 **리스크 인식 툴**로만 사용.
+- In mainstream economics, the "18.6-year cycle" is an **empirically unverified hypothesis**. Harrison generalized a single-city case from Hoyt (1933) on Chicago.
+- Empirical studies (Shiller 2015; Case-Shiller Index; IMF Global Housing Watch) acknowledge *the existence of cyclicality itself* but **reject a precise 18.6-year cycle**. Actual cycles vary by country and region within a **range of 12–25 years**.
+- The 2008 call landed, but explanations like "linked to the Moon's orbit" are **post-hoc rationalizations**. The causal mechanisms (credit expansion and land speculation) are more rigorously explained by **Minsky's Financial Instability Hypothesis**.
+- **Valid use of this framework**: not for precise timing predictions, but only as a **risk awareness tool** suggesting that "long-term cycles may exist."
 
-## 핵심 주장
+## Core Claims
 
-### 1. 사이클 구조 (Harrison)
+### 1. Cycle Structure (Harrison)
 
 ```
-Year 0-7   : Recovery / early growth  (완만한 회복)
-Year 7-11  : Mid-cycle dip           (짧은 조정)
-Year 11-14 : Winner's Curse          (버블 구간, 급등)
+Year 0-7   : Recovery / early growth  (gentle recovery)
+Year 7-11  : Mid-cycle dip           (short correction)
+Year 11-14 : Winner's Curse          (bubble phase, sharp rise)
 Year 14    : Peak
-Year 14-18 : Crash                   (4년 급락)
+Year 14-18 : Crash                   (4-year sharp decline)
 ```
 
-### 2. 왜 18.6년인가?
+### 2. Why 18.6 Years?
 
-- 토지 투기·건설 과잉·은행 신용 팽창·붕괴의 lag 합
-- 세대 간 기억 망각 (직전 위기 경험자 영향력 감소)
-- 달의 궤도 주기(18.6년)와 우연의 일치 — Harrison의 미신적 포장은 주의
-- 실증 근거는 *대략적* — 정확히 18.6년이 아닌 15~22년 범위
+- Cumulative lag from land speculation, construction excess, bank credit expansion, and collapse
+- Generational memory loss (diminishing influence of those who experienced the previous crisis)
+- Coincidental alignment with the Moon's orbital period (18.6 years) — Harrison's mystical framing should be treated with caution
+- Empirical support is *approximate* — not exactly 18.6 years but a range of 15–22 years
 
-### 3. 과거 피크 (Harrison 주장)
+### 3. Historical Peaks (Harrison's Claim)
 
-- 1818, 1836, 1854, 1873, 1890, 1907, 1926, 1944(?), **1973, 1990**(일본), **2008**, **2026?**
+- 1818, 1836, 1854, 1873, 1890, 1907, 1926, 1944(?), **1973, 1990** (Japan), **2008**, **2026?**
 
-### 4. 토지 가치가 경기를 *주도*
+### 4. Land Values *Drive* the Economy
 
-- 단순히 경기와 부동산이 동조하는 게 아니라, *토지 투기 → 은행 과대출 → 붕괴 → 경기 침체* 순서
-- 2008 금융위기는 이 가설의 상징적 사례
+- Rather than the economy and real estate simply co-moving, the sequence is: *land speculation → bank over-lending → collapse → economic recession*
+- The 2008 financial crisis is the symbolic case study of this hypothesis
 
-## 언제 쓰나
+## When to Use
 
-- "지금 사이클 어디쯤인가?" — 매수·매도 타이밍 판단의 배경
-- "일본화 vs 계속 상승 논쟁" — 사이클 관점 vs 구조 변화 관점
-- "다음 조정은 언제?" — 방어적 포지션 설계
-- 장기 자산 배분 결정
+- "Where are we in the cycle right now?" — background for buy/sell timing judgments
+- "Japanification vs. continued rise" debate — cyclical view vs. structural change view
+- "When is the next correction?" — defensive position design
+- Long-term asset allocation decisions
 
-## 한국 시장 적용 포인트
+## Points for Applying to the Korean Market
 
-### 1. 한국 부동산 사이클 (경험적 구분, 논쟁 여지)
+### 1. Korean Real Estate Cycles (Empirical Segmentation, Subject to Debate)
 
-| 기간 | 수도권 | 지방 광역시 | 특징 |
+| Period | Seoul Metropolitan | Regional Metro Cities | Characteristics |
 |---|---|---|---|
-| 1986-1991 | 상승 | 상승 (동조) | 3저 호황, 1기 신도시 계획 |
-| 1991-1998 | 정체/하락 | 정체/하락 | 외환위기로 최종 급락 |
-| 1998-2003 | 회복·상승 | 상대 약세 | 저금리, 재건축 규제완화. 수도권 선행 |
-| 2003-2007 | 상승 (강남 주도) | 혼조 | 참여정부 후반 |
-| 2007-2013 | 정체·약세 | **상승 (지방 빅5)** | 수도권·지방 **역동조**. 지방은 지역 기업 호황 |
-| 2014-2021 | 급등 | 분화 (부산·대구·대전 상승, 울산·포항 약세) | 저금리, 갭투자 대중화 |
-| 2022-2024 | 조정 | 지역별 편차 (대구 약세, 부산 혼조) | 금리 인상, 역전세, 정책 전환 |
-| 2024-2026 | 서울 선도 회복 / 외곽 약세 | 지방 침체 | 양극화 심화 |
+| 1986-1991 | Up | Up (synchronized) | "Three Lows" boom, 1st-phase new town plans |
+| 1991-1998 | Stagnation/decline | Stagnation/decline | Final sharp drop from the Asian Financial Crisis |
+| 1998-2003 | Recovery · rise | Relative weakness | Low rates, reconstruction deregulation. Seoul metro leading |
+| 2003-2007 | Rise (Gangnam-led) | Mixed | Late Roh Moo-hyun administration |
+| 2007-2013 | Stagnation · weak | **Rise (Regional Big 5)** | **Inverse synchronization** between Seoul metro and regions. Regional booms driven by local corporate prosperity |
+| 2014-2021 | Sharp rise | Divergence (rise in Busan, Daegu, Daejeon; weakness in Ulsan, Pohang) | Low rates, popularization of gap investment |
+| 2022-2024 | Correction | Regional variation (Daegu weak, Busan mixed) | Rate hikes, reverse jeonse (역전세), policy shift |
+| 2024-2026 | Seoul-led recovery / weakness in outskirts | Regional slump | Intensifying polarization |
 
-→ **수도권·지방 사이클 비동조성이 2000년대 이후 뚜렷**. 단일 "한국 사이클"로 해석하면 오류.
-→ 대략 수도권은 **15~18년 사이클**과 정합성 있으나 지방은 **지역 산업 주기 의존** (울산 = 조선·자동차, 거제 = 조선, 포항 = 철강).
+→ **Non-synchronization between Seoul metro and regional cycles has been pronounced since the 2000s**. Interpreting Korea as a single "Korean cycle" leads to errors.
+→ The Seoul metro area has roughly been consistent with a **15–18-year cycle**, but regions depend on **local industry cycles** (Ulsan = shipbuilding/autos, Geoje = shipbuilding, Pohang = steel).
 
-### 2. 2026 피크 가설의 한국 적용
+### 2. Application of the 2026 Peak Hypothesis to Korea
 
-- Harrison은 2026 전후 글로벌 피크 예측
-- 한국은 2022년부터 이미 조정 국면 → *피크 통과 가능성* 또는 *중간 딥* 해석 가능
-- 2025~2026 수도권 입주 물량, 금리 방향, 정책(대출·세제 완화)이 분기점
+- Harrison predicts a global peak around 2026
+- Korea has already been in a correction phase since 2022 → can be interpreted as either *having passed the peak* or *being in a mid-cycle dip*
+- The 2025–2026 Seoul metro supply pipeline, interest rate direction, and policy (loan/tax easing) are the inflection points
 
-### 3. 한국 특수 변수 (사이클 왜곡 요인)
+### 3. Korea-Specific Variables (Cycle Distortion Factors)
 
-- **인구구조**: 생산가능인구 감소 (2020년 피크), 저출산 심화 → 장기 수요 하락
-- **전세 제도**: 레버리지 구조가 사이클을 증폭
-- **정책 개입**: 한국은 사이클 중간에 정부 개입이 빈번 (규제 강화·완화 반복)
-- **수도권 집중**: 지방과 수도권 사이클이 다르게 움직임
-- **가계부채**: GDP 대비 105% — 레버리지 축소 시 조정 장기화
+- **Demographic structure**: Working-age population peaked in 2020, with low birth rates worsening → long-term demand decline
+- **Jeonse (전세) system**: Leverage structure amplifies the cycle
+- **Policy intervention**: In Korea, government frequently intervenes mid-cycle (repeated tightening and easing of regulations)
+- **Seoul metropolitan concentration**: Regional and Seoul metro cycles move differently
+- **Household debt**: 105% of GDP — corrections prolong when leverage contracts
 
-### 4. "일본화" vs "사이클 계속" 논쟁
+### 4. "Japanification" vs. "Continued Cycle" Debate
 
-| 시나리오 | 근거 | 반박 |
+| Scenario | Basis | Counterargument |
 |---|---|---|
-| 일본화 | 인구 감소, 가계부채, 고령화 | 한국은 수도권 집중도 높음, 일본은 전국 분산 |
-| 사이클 계속 | 공급 부족, 실물 자산 선호, 규제 완화 여지 | 수요 기반 자체가 축소 중 |
+| Japanification | Population decline, household debt, aging | Korea has high Seoul metro concentration; Japan's population was dispersed nationwide |
+| Cycle continues | Supply shortage, preference for physical assets, room for deregulation | The demand base itself is shrinking |
 
-**Harrison 관점**: 구조적 변화는 사이클을 *연장*하거나 *폭을 줄이지만* 없애진 않는다. 단, 인구 감소는 Harrison 모형이 처음 다뤄보는 변수.
+**Harrison's view**: Structural changes *extend* cycles or *reduce their amplitude* but do not eliminate them. However, population decline is a variable Harrison's model has never dealt with before.
 
-## 사용 절차
+## Procedure for Use
 
 ```
-1. 지역별 사이클 위치 추정
-   - 수도권 vs 광역시 vs 지방 따로
-   - 직전 피크·저점 시점 식별
-2. 현재 국면 판단
-   - 가격 모멘텀 (전년 대비 %)
-   - 거래량 (사이클 선행)
-   - 전세가율 (심리 지표)
-   - 대출·금리 환경
-3. 다음 2~5년 시나리오
-   - 사이클 지속 / 일본화 / 정책 개입 시나리오 가중치
-4. 포지션 조정
-   - 피크 근접 → 디레버리지, 현금 비중 확대
-   - 저점 근접 → 매수 준비
-   - 불확실 → 시간 분산 매매
+1. Estimate cycle position by region
+   - Seoul metro vs. metropolitan cities vs. regional areas separately
+   - Identify the most recent peak and trough dates
+2. Judge the current phase
+   - Price momentum (% YoY)
+   - Transaction volume (leads the cycle)
+   - Jeonse-to-sale price ratio (sentiment indicator)
+   - Lending and interest rate environment
+3. 2–5 year forward scenarios
+   - Weight cycle continuation / Japanification / policy intervention scenarios
+4. Position adjustment
+   - Approaching peak → deleverage, increase cash weighting
+   - Approaching trough → prepare to buy
+   - Uncertain → time-diversified buying
 ```
 
-## 한국 맥락 예시
+## Korean Context Example
 
-**질문**: "2026년 상급지 갈아타기 — Harrison 관점에서 타이밍 맞나?"
+**Question**: "Trading up to a premium location in 2026 — is the timing right from a Harrison perspective?"
 
-**사이클 위치 분석**:
-- 수도권 직전 피크: 2021년 말
-- 조정 구간 진행 4년차 (2022-2025)
-- Harrison 모형 기준: 4년 하락 + 2년 회복 = **2026-2027년이 저점·회복 구간**
-- 단, 인구구조·가계부채는 일본화 시나리오 가중치 요인
+**Cycle Position Analysis**:
+- Seoul metro's most recent peak: end of 2021
+- Correction phase in its 4th year (2022–2025)
+- Harrison model benchmark: 4 years of decline + 2 years of recovery = **2026–2027 is the trough/recovery phase**
+- However, demographic structure and household debt weigh toward the Japanification scenario
 
-**함의**:
-- *사이클 가설 맞다면* 2026 저점 부근 매수는 타이밍 유리
-- *일본화 맞다면* 2026에 "저점"은 없고 계속 완만한 하락
-- **포지션**: 한 번에 올인하지 말고 2026~2028에 걸쳐 분산 매수 / 또는 전세로 살다 저점 확인 후 매수
+**Implications**:
+- *If the cycle hypothesis holds*, buying near a 2026 trough is timing-favorable
+- *If Japanification holds*, there is no "trough" in 2026, only continued gradual decline
+- **Position**: Don't go all-in at once. Spread purchases across 2026–2028 / or live on jeonse and buy after confirming the trough
 
-**중요**: 사이클 가설은 *대략적 지도*이지 정밀 지표 아님. 정책·개인 상황이 더 결정적.
+**Important**: The cycle hypothesis is a *rough map*, not a precision indicator. Policy and personal circumstances are more decisive.
 
-## 한계
+## Limitations
 
-1. **사이클 시점의 정밀도 낮음** — "18.6년"은 평균이고 ±4년 오차.
-2. **구조 변화 미반영** — 인구 절벽, 재택근무, 양극화는 사이클 모형 바깥.
-3. **지역별 동조 약함** — 한국 내 수도권·광역시·지방이 독립 사이클.
-4. **정책 개입** — 한국은 사이클 중간에 정부가 자주 개입 → 교란.
-5. **확증 편향 위험** — 과거 피크는 사후에만 명확. 실시간 위치 판단은 항상 모호.
-6. **Harrison 본인의 예측 실적**: 2008 적중했지만 이후 예측은 엇갈림.
+1. **Low precision in cycle timing** — "18.6 years" is an average with ±4-year error margin.
+2. **Structural changes not reflected** — demographic cliff, remote work, polarization lie outside the cycle model.
+3. **Weak regional synchronization** — within Korea, Seoul metro, metropolitan cities, and regions follow independent cycles.
+4. **Policy intervention** — in Korea, the government frequently intervenes mid-cycle → creating noise.
+5. **Risk of confirmation bias** — past peaks are only clear in hindsight. Real-time position judgment is always ambiguous.
+6. **Harrison's own track record**: The 2008 call landed, but subsequent predictions have been mixed.
 
-## 이 프레임워크가 *틀렸을 때*
+## When This Framework Is *Wrong*
 
-- 공급·수요 단기 동학 → `dipasquale-wheaton`
-- 단일 매물 평가 → `hedonic-pricing`, `cap-rate-dcf`
-- 입지 구조 → `alonso-muth-mills`
-- 레버리지 구조 리스크 → `gap-investment`
+- Short-term supply/demand dynamics → `dipasquale-wheaton`
+- Single-property valuation → `hedonic-pricing`, `cap-rate-dcf`
+- Locational structure → `alonso-muth-mills`
+- Leverage structure risk → `gap-investment`
 
-## 추가 학습 자료
+## Further Reading
 
 - Harrison, F. (2005). *Boom Bust: House Prices, Banking and the Depression of 2010.*
 - Anderson, P. J. (2009). *The Secret Life of Real Estate and Banking.*
 - Hoyt, H. (1933). *One Hundred Years of Land Values in Chicago.*
-- 한국 적용 논의: KDI, 한국개발연구원의 부동산 장기 사이클 리포트, 박원갑·홍춘욱 등 국내 저자의 사이클 분석.
-- **주의**: 이 이론은 주류 경제학에서 *논쟁적 위치*. 확신하지 말 것.
+- Discussions on Korean application: long-term real estate cycle reports from KDI (Korea Development Institute), and cycle analyses by Korean authors such as Park Won-gap and Hong Chun-wook.
+- **Caution**: This theory occupies a *contested position* within mainstream economics. Do not hold it with conviction.

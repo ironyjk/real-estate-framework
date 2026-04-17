@@ -1,157 +1,157 @@
 ---
 name: dipasquale-wheaton
 version: "0.1.0"
-description: "DiPasquale-Wheaton 4분면 모델 — 임대시장·자산시장·건설시장·재고시장이 어떻게 맞물려 균형/불균형을 만드는지 시각화. 갈아타기·공급 폭탄·전세 전이·매매-전세 괴리 해석에 사용."
+description: "DiPasquale-Wheaton 4-Quadrant Model — visualizes how the rental market, asset market, construction market, and stock market interlock to create equilibrium/disequilibrium. Use for interpreting home-swapping, supply shocks, jeonse (전세) transmission, and sale-jeonse price divergence."
 ---
 
 # DiPasquale-Wheaton 4-Quadrant Model
 
-## 한 줄 요약
+## One-Line Summary
 
-부동산은 *네 개의 연결된 시장* — **임대료**가 정해지는 시장, **자산 가격**이 정해지는 시장, **신규 건설**이 결정되는 시장, **재고**가 조정되는 시장. 한 시장의 충격이 나머지 셋으로 돈다.
+Real estate is *four connected markets* — the market where **rent** is set, the market where **asset prices** are set, the market where **new construction** is decided, and the market where **stock** adjusts. A shock in one market propagates through the other three.
 
-## 이론 기원
+## Theoretical Origin
 
-- **DiPasquale & Wheaton (1992)** — "The Markets for Real Estate Assets and Space: A Conceptual Framework" (*AREUEA Journal* 20(1))에서 4분면 프레임워크 제시. 1996년 교재 *Urban Economics and Real Estate Markets* (Prentice Hall)에서 체계화.
-- 이론의 뿌리: Wheaton (1987) "The Cyclic Behavior of the National Office Market" (AREUEA), Poterba (1984) 주택 모형.
-- 부동산 학계 표준 교과서 모형. 매크로 충격이 주택 시장에 어떻게 전파되는지 설명.
+- **DiPasquale & Wheaton (1992)** — "The Markets for Real Estate Assets and Space: A Conceptual Framework" (*AREUEA Journal* 20(1)) introduced the 4-quadrant framework. Systematized in the 1996 textbook *Urban Economics and Real Estate Markets* (Prentice Hall).
+- Theoretical roots: Wheaton (1987) "The Cyclic Behavior of the National Office Market" (AREUEA), Poterba (1984) housing model.
+- Standard textbook model in real estate academia. Explains how macro shocks propagate through the housing market.
 
-## 4분면 구조
-
-```
-       임대시장 (공간)     |     자산시장 (소유권)
-       NE: D(R) = S         |     NW: P = R / i
-       ─────────────────────┼─────────────────────
-       SW: C = f(P)         |     SE: ΔS = C − δS
-       건설시장             |     재고 조정
-```
-
-- **1사분면 (NE) 임대시장**: 수요 $D(R)$ = 재고 $S$ → 임대료 $R$ 결정
-- **2사분면 (NW) 자산시장**: 가격 $P$ = 임대료 $R$ / 할인율 $i$ (capitalization)
-- **3사분면 (SW) 건설시장**: 가격 $P$ ≥ 대체 비용이면 신규 건설 $C$ 발생
-- **4사분면 (SE) 재고 조정**: 신규 건설 − 감가 $\delta S$ = 재고 변화
-
-네 개가 닫힌 루프를 이룬다. 장기 균형에서 모든 화살표가 일치.
-
-## 핵심 통찰
-
-### 1. 충격의 전파 경로
-
-**수요 충격 (예: 소득 증가)**
-→ 임대료 ↑ (1사분면)
-→ 자산 가격 ↑ (2사분면)
-→ 건설 ↑ (3사분면)
-→ 재고 ↑ (4사분면)
-→ 임대료 ↓ (다시 1사분면, *시차*)
-
-### 2. 시차(Lag)가 사이클을 만든다
-
-건설은 2~5년 걸린다. 그래서 "수요 증가→가격 상승→과잉 건설→가격 하락→건설 중단→재고 부족→가격 상승..." 사이클 반복.
-
-### 3. 임대료와 가격은 다른 시장
-
-임대료는 *단기 수요*, 가격은 *장기 기대 + 금리*로 움직인다. 전세가율(전세/매매)이 단기에 크게 움직이는 이유.
-
-## 언제 쓰나
-
-- "입주 폭탄이 매매가에 얼마나 영향?" — 4→1→2 경로
-- "전세가가 떨어지는데 매매가는 왜 버티나?" — 1과 2의 시차·괴리
-- "갈아타기 타이밍" — 매도 시장(2사분면)과 매수 시장(2사분면)의 로컬 불균형 비교
-- "금리 인상 시 어느 시장이 먼저 맞나?" — 2사분면 $i$ 변화 → 전파
-- "분양가상한제가 시장에 미치는 영향" — 3사분면 $P→C$ 링크 왜곡
-
-## 한국 시장 적용 포인트
-
-### 1. 한국 특수: 전세 제도
-
-전세는 월세의 대체재이면서 *무이자 대출*이다. 4Q 모델에서:
-
-- 1사분면: 임대료 대신 **전세가 + 월세** 이중 구조
-- 2사분면: 갭투자가 $P = R/i$ 관계를 왜곡. 전세 레버리지가 $P$를 *R과 무관하게* 끌어올릴 수 있음
-- 결과: **전세가율이 1.0에 가까워지면 갭투자 과열 신호, 0.4 이하면 시장 냉각 신호**
-
-### 2. 분양가상한제의 영향
-
-3사분면 $C = f(P)$ 링크를 끊는다:
-- 시장 가격이 올라도 신규 분양가는 규제
-- → 건설 유인 약화 (재건축 지연)
-- → 재고 공급 부족 지속
-- → 가격 상승 고착
-- *의도와 반대 효과*가 이 모델로 설명됨
-
-### 3. 공급 폭탄 분석
-
-예: "2025~2026 동탄 입주 물량 3만 세대"
-- 4사분면: $\Delta S$ 급증
-- 1사분면: 전세 $R$ 하락 → 역전세
-- 2사분면: 자산 가격 $P = R/i$ 하락 압력
-- 3사분면: 신규 건설 $C$ 위축
-- **시차 때문에 전세 먼저, 매매 1~2년 뒤 반영**
-
-### 4. 금리 충격
-
-2사분면 $i$ 상승 → $P$ 하락
-→ 3사분면 $C$ 감소
-→ 4사분면 재고 감소 (시차)
-→ 1사분면 $R$ 상승 (장기)
-**단기: 가격↓전세↓ 동반 | 장기: 가격↓이지만 전세↑ 반전 가능**
-
-## 사용 절차
+## 4-Quadrant Structure
 
 ```
-1. 현재 위치 진단:
-   - 전세가율 (1사분면 ↔ 2사분면)
-   - PIR, PRR (소득·임대료 대비 가격)
-   - 입주 물량 (4사분면 예측)
-   - 인허가·착공 (3사분면 선행지표)
-   - 금리·대출 조건 (2사분면)
-
-2. 충격 식별:
-   - 현재 어떤 사분면에 충격이?
-   - 얼마나 큰가?
-
-3. 전파 경로 추적:
-   - 다음 12/24/36개월 시차별 영향
-
-4. 내 포지션이 어디를 맞나:
-   - 매수자: 2사분면
-   - 매도자: 2사분면
-   - 세입자: 1사분면
-   - 갭투자자: 1+2 복합
+       Rental Market (Space)  |     Asset Market (Ownership)
+       NE: D(R) = S           |     NW: P = R / i
+       ───────────────────────┼─────────────────────
+       SW: C = f(P)           |     SE: ΔS = C − δS
+       Construction Market    |     Stock Adjustment
 ```
 
-## 한국 맥락 예시
+- **Quadrant 1 (NE) Rental Market**: Demand $D(R)$ = Stock $S$ → determines rent $R$
+- **Quadrant 2 (NW) Asset Market**: Price $P$ = Rent $R$ / discount rate $i$ (capitalization)
+- **Quadrant 3 (SW) Construction Market**: If price $P$ ≥ replacement cost, new construction $C$ occurs
+- **Quadrant 4 (SE) Stock Adjustment**: New construction − depreciation $\delta S$ = change in stock
 
-**질문**: "울산 범서에서 상급지로 갈아타려는데, 2025년 광역시 입주 물량이 많다던데 언제?"
+The four form a closed loop. In long-run equilibrium, all arrows align.
 
-**4Q 분석**:
+## Core Insights
 
-- **4사분면 (재고)**: 울산 입주 물량 2025-2026 증가 (구체 수치 확인 필요)
-- **1사분면 (전세)**: 입주 시점부터 전세 하락 시작 → 약 6~12개월
-- **2사분면 (매매가)**: 전세 하락 → 갭투자 이탈 → 매매 하락 압력. 시차 약 12~18개월
-- **매도 타이밍**: 전세 하락 *전에* 현재 집 매도 (2024년 하반기~2025년 상반기)
-- **매수 타이밍**: 매매가 조정 *후* 상급지 매수 (2026년 하반기~2027년)
-- **중간 공백**: 전세로 거주하는 "올인" 전략 검토
+### 1. Shock Propagation Path
 
-*주의*: 이건 모델 기반 추론이지 예측이 아님. 금리·정책·지역 특수 요인으로 빗나갈 수 있음.
+**Demand shock (e.g., income increase)**
+→ Rent ↑ (Quadrant 1)
+→ Asset price ↑ (Quadrant 2)
+→ Construction ↑ (Quadrant 3)
+→ Stock ↑ (Quadrant 4)
+→ Rent ↓ (back to Quadrant 1, *with a lag*)
 
-## 한계
+### 2. Lag Creates Cycles
 
-1. **지역 세분화 부족** — 원형 모델은 단일 시장 가정. 한국은 수도권/광역시/지방이 독립 사이클.
-2. **심리·서사 누락** — "집값 불패", "일본화" 같은 기대가 $P$에 미치는 영향은 $i$로 다 흡수 안 됨.
-3. **정책 충격 외생** — 다주택 중과·대출 규제는 모델 외부에서 계수들을 흔듦.
-4. **전세 보증금 자본 흐름** — 한국은 $R$이 자본 흐름이기도 해서, 원형 모델로 완전 포착 어려움.
-5. **데이터 시차** — 1사분면 전세, 2사분면 실거래가, 3사분면 인허가의 통계 딜레이가 다름.
+Construction takes 2–5 years. Hence the recurring cycle: "demand rises → prices rise → overbuilding → prices fall → construction halts → stock shortage → prices rise..."
 
-## 이 프레임워크가 *틀렸을 때*
+### 3. Rent and Price Are Different Markets
 
-- 속성별 가격 분해 문제 → `hedonic-pricing`
-- 사이클의 장기 위치 판단 → `harrison-cycle`
-- 단일 매물 수익성 → `cap-rate-dcf`
-- 입지 경쟁력 구조 → `alonso-muth-mills`
+Rent moves on *short-term demand*, price on *long-term expectations + interest rates*. This is why the jeonse-to-sale ratio (jeonse/sale price) can swing significantly in the short term.
 
-## 추가 학습 자료
+## When to Use
+
+- "How much will the move-in supply shock hit sale prices?" — Path 4→1→2
+- "Why are sale prices holding up when jeonse (전세) is falling?" — Lag and divergence between 1 and 2
+- "Timing for home-swapping" — compare local imbalances between the sell-side market (Quadrant 2) and buy-side market (Quadrant 2)
+- "Which market gets hit first when rates rise?" — Quadrant 2 $i$ change → propagation
+- "Impact of the price cap on new apartments" — distortion of the $P→C$ link in Quadrant 3
+
+## Application Points for the Korean Market
+
+### 1. Korea-Specific: The Jeonse System
+
+Jeonse (전세) is both a substitute for monthly rent and an *interest-free loan*. In the 4Q model:
+
+- Quadrant 1: Instead of a single rent, there is a **dual structure of jeonse deposit + monthly rent**
+- Quadrant 2: Gap investment distorts the $P = R/i$ relationship. Jeonse leverage can push $P$ up *independently of $R$*
+- Result: **A jeonse-to-sale ratio approaching 1.0 signals gap-investment overheating; below 0.4 signals a cooling market**
+
+### 2. Impact of the Price Cap on New Apartments
+
+Breaks the $C = f(P)$ link in Quadrant 3:
+- Even as market prices rise, new subscription (청약) prices are regulated
+- → Weakens construction incentives (reconstruction delays)
+- → Stock supply shortage persists
+- → Price appreciation becomes entrenched
+- *The opposite of intent* is explained by this model
+
+### 3. Supply Shock Analysis
+
+Example: "30,000 units move into Dongtan in 2025–2026"
+- Quadrant 4: $\Delta S$ surges
+- Quadrant 1: Jeonse $R$ falls → reverse jeonse (역전세)
+- Quadrant 2: Asset price $P = R/i$ comes under downward pressure
+- Quadrant 3: New construction $C$ contracts
+- **Due to the lag, jeonse moves first, sale prices follow 1–2 years later**
+
+### 4. Interest Rate Shock
+
+Quadrant 2 $i$ rises → $P$ falls
+→ Quadrant 3 $C$ decreases
+→ Quadrant 4 stock decreases (with lag)
+→ Quadrant 1 $R$ rises (long run)
+**Short run: prices↓ and jeonse↓ together | Long run: prices↓ but jeonse↑ reversal possible**
+
+## Procedure for Use
+
+```
+1. Diagnose current position:
+   - Jeonse-to-sale ratio (Quadrant 1 ↔ Quadrant 2)
+   - PIR, PRR (price relative to income and rent)
+   - Move-in supply (Quadrant 4 forecast)
+   - Permits and groundbreaking (Quadrant 3 leading indicator)
+   - Interest rates and loan conditions (Quadrant 2)
+
+2. Identify the shock:
+   - Which quadrant is currently being shocked?
+   - How large?
+
+3. Trace the propagation path:
+   - Lagged impact over the next 12/24/36 months
+
+4. Where does your position get hit:
+   - Buyer: Quadrant 2
+   - Seller: Quadrant 2
+   - Tenant: Quadrant 1
+   - Gap investor: Quadrants 1+2 combined
+```
+
+## Korean Context Example
+
+**Question**: "I'm trying to move up from Beomseo in Ulsan to a higher-tier district. I hear 2025 brings a wave of new supply across metropolitan cities — when should I move?"
+
+**4Q Analysis**:
+
+- **Quadrant 4 (Stock)**: Ulsan move-in supply rises in 2025–2026 (exact figures need confirmation)
+- **Quadrant 1 (Jeonse)**: Jeonse starts falling from the move-in date → about 6–12 months
+- **Quadrant 2 (Sale price)**: Jeonse decline → gap investors exit → downward pressure on sale prices. Lag of about 12–18 months
+- **Sell timing**: Sell the current home *before* jeonse declines (H2 2024 – H1 2025)
+- **Buy timing**: Buy the upper-tier property *after* the sale-price correction (H2 2026 – 2027)
+- **Intermediate gap**: Consider an "all-in" strategy of renting jeonse in between
+
+*Caveat*: This is model-based reasoning, not a forecast. Interest rates, policy, and region-specific factors can cause deviations.
+
+## Limitations
+
+1. **Insufficient regional granularity** — The original model assumes a single market. Korea's metropolitan area, metropolitan cities, and regional markets follow independent cycles.
+2. **Psychology and narrative missing** — The effect of expectations like "housing never loses" or "Japanification" on $P$ is not fully absorbed by $i$.
+3. **Exogenous policy shocks** — Multi-home taxation and loan regulations shake the coefficients from outside the model.
+4. **Jeonse deposit as capital flow** — In Korea, $R$ is also a capital flow, which the original model cannot fully capture.
+5. **Data lags** — Statistical delays differ across Quadrant 1 jeonse, Quadrant 2 actual transaction prices, and Quadrant 3 permits.
+
+## When This Framework Is *Wrong*
+
+- Decomposing price by attribute → `hedonic-pricing`
+- Judging the long-term position of the cycle → `harrison-cycle`
+- Profitability of a single property → `cap-rate-dcf`
+- Structure of locational competitiveness → `alonso-muth-mills`
+
+## Additional Learning Resources
 
 - DiPasquale, D. & Wheaton, W. (1996). *Urban Economics and Real Estate Markets.* Prentice Hall.
-- 국내 적용: KDI 부동산 리포트, 한국개발연구원 주택시장 분석 시리즈
-- 실무 참고: 입주물량 데이터 (부동산114, 아실), 전세가율 (KB통계)
+- Domestic application: KDI real estate reports, Korea Development Institute housing market analysis series
+- Practical references: Move-in supply data (Budongsan114, Asil), jeonse-to-sale ratio (KB Statistics)

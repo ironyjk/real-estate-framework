@@ -1,179 +1,179 @@
 ---
 name: cap-rate-dcf
 version: "0.1.0"
-description: "Cap Rate / DCF — 수익형 부동산(상가·오피스·원룸·꼬마빌딩)의 가치를 NOI와 할인율로 평가. 한국 월세/전세 혼합, 보증금 환산, 취득세·종부세·임대소득세 반영."
+description: "Cap Rate / DCF — Valuation of income-producing real estate (retail, office, studio apartments, small buildings) using NOI and discount rates. Handles Korean monthly-rent/jeonse hybrid structures, deposit conversion, acquisition tax, comprehensive real estate tax, and rental income tax."
 ---
 
 # Cap Rate / DCF Valuation
 
-## 한 줄 요약
+## One-Line Summary
 
-수익형 부동산의 가치 = **현재와 미래의 순운영수익(NOI)의 현재가치 합**. 단기 판단엔 Cap Rate, 중장기 판단엔 DCF.
+The value of income-producing real estate = **the present value of current and future Net Operating Income (NOI)**. Use Cap Rate for short-term judgment, DCF for mid- to long-term judgment.
 
-## 이론 기원
+## Theoretical Origins
 
-- 전통적 상업용 부동산 감정평가 방법. Appraisal Institute 표준.
-- 3대 접근법(비교접근법·원가접근법·수익접근법) 중 *수익접근법*.
-- Korpacz, PwC Real Estate Investor Survey 등 Cap Rate 데이터 표준.
+- Traditional commercial real estate appraisal method. Appraisal Institute standard.
+- Among the three approaches (sales comparison, cost, income), this is the *income approach*.
+- Korpacz, PwC Real Estate Investor Survey, etc. serve as Cap Rate data standards.
 
-## 핵심 개념
+## Core Concepts
 
 ### 1. NOI (Net Operating Income)
 
-$$\text{NOI} = \text{GPR} \times (1 - \text{공실률}) - \text{운영비용}$$
+$$\text{NOI} = \text{GPR} \times (1 - \text{vacancy rate}) - \text{operating expenses}$$
 
-- **GPR (Gross Potential Rent)**: 잠재 총 임대수입 (공실 없다고 가정)
-- **운영비용**: 재산세·관리비·수선유지비·보험. *대출 이자·감가는 제외*.
+- **GPR (Gross Potential Rent)**: Total potential rental income (assuming zero vacancy)
+- **Operating expenses**: Property tax, management fees, repairs and maintenance, insurance. *Loan interest and depreciation are excluded.*
 
 ### 2. Cap Rate
 
-$$\text{Cap Rate} = \frac{\text{NOI}}{\text{부동산 가격}}$$
+$$\text{Cap Rate} = \frac{\text{NOI}}{\text{property price}}$$
 
-$$\text{가격} = \frac{\text{NOI}}{\text{Cap Rate}}$$
+$$\text{Price} = \frac{\text{NOI}}{\text{Cap Rate}}$$
 
-- 한국 상업용 Cap Rate 대략 (2026.4): 서울 프라임 오피스 4.0~4.8% (금리 인상으로 상승), 강남 꼬마빌딩 2.8~3.8%, 지방 상가 5~8%
-- 낮을수록 비싸진 것(자산 가격 대비 수익 낮음).
+- Approximate Korean commercial Cap Rates (April 2026): Seoul prime office 4.0~4.8% (risen due to interest rate hikes), Gangnam small buildings (꼬마빌딩) 2.8~3.8%, regional retail 5~8%
+- The lower it is, the more expensive the asset has become (low yield relative to asset price).
 
-### 2-1. Gordon Growth (Cap Rate의 이론적 해부)
+### 2-1. Gordon Growth (Theoretical Dissection of Cap Rate)
 
 $$\text{Cap Rate} = r - g$$
 
-- $r$: 요구수익률 (기회비용 + 리스크 프리미엄)
-- $g$: NOI 장기 성장률 (임대료 인상률 − 감가 − 운영비 증가)
-- 함의:
-  - 임대료 성장률↑ → Cap Rate↓ → 가격↑ ("성장 프리미엄")
-  - 금리 상승으로 $r$↑ but $g$ 그대로면 → Cap Rate↑ → 가격↓
-  - 한국 꼬마빌딩 Cap Rate 낮은 이유: 시세차익 기대($g$ 높게 추정)가 Cap Rate를 누름 → **buyer가 현금흐름이 아닌 capital gain에 베팅 중**이라는 신호
+- $r$: Required rate of return (opportunity cost + risk premium)
+- $g$: Long-term NOI growth rate (rent increases − depreciation − operating expense increases)
+- Implications:
+  - Rent growth rate↑ → Cap Rate↓ → Price↑ ("growth premium")
+  - If interest rates rise causing $r$↑ but $g$ stays the same → Cap Rate↑ → Price↓
+  - Why Korean small buildings (꼬마빌딩) have low Cap Rates: Capital gains expectations (high estimated $g$) push Cap Rate down → **a signal that buyers are betting on capital gain rather than cash flow**
 
 ### 3. DCF (Discounted Cash Flow)
 
 $$V = \sum_{t=1}^{n} \frac{\text{CF}_t}{(1+r)^t} + \frac{\text{Terminal Value}}{(1+r)^n}$$
 
-- $r$: 할인율 (기회비용 + 리스크 프리미엄)
-- Terminal Value: 최종 연도 NOI / exit cap rate
-- 5~10년 projection 일반
+- $r$: Discount rate (opportunity cost + risk premium)
+- Terminal Value: Final year NOI / exit cap rate
+- 5~10 year projections are typical
 
-### 4. 레버리지 후 수익률 (Levered Return)
+### 4. Levered Return
 
-대출 포함 시:
-$$\text{Cash-on-Cash} = \frac{\text{NOI} - \text{이자}}{\text{자기자본}}$$
+When including debt:
+$$\text{Cash-on-Cash} = \frac{\text{NOI} - \text{interest}}{\text{equity}}$$
 
-- 대출 금리 < Cap Rate이면 레버리지 유리 (positive leverage)
-- 반대면 레버리지가 수익률을 깎음
+- If loan rate < Cap Rate, leverage is favorable (positive leverage)
+- If the opposite, leverage erodes returns
 
-## 언제 쓰나
+## When to Use
 
-- 상가·오피스·꼬마빌딩·원룸·고시원 매입 판단
-- 상업용 감정평가 검증
-- 리노베이션 vs 매각 결정 (가치 변화 시뮬레이션)
-- 임대 vs 분양 수익 비교
-- 재건축 사업성 분석의 하위 도구 (개발 후 NOI → 가격)
+- Purchase decisions for retail, office, small buildings (꼬마빌딩), studio apartments, and goshiwon (고시원)
+- Verification of commercial appraisals
+- Renovation vs. sale decisions (simulating value changes)
+- Comparing rental vs. sale-based profits
+- As a sub-tool for reconstruction feasibility analysis (post-development NOI → price)
 
-## 한국 시장 적용 포인트
+## Korean Market Application Points
 
-### 1. 보증금 → 월세 환산 (전월세 전환율)
+### 1. Deposit → Monthly Rent Conversion (Jeonse-Wolse Conversion Rate)
 
-한국은 "보증금 5천/월세 100" 식 혼합 구조. 표준화:
+Korea uses a hybrid structure like "deposit 50M / monthly rent 1M". Standardization:
 
-$$\text{환산월세} = \text{월세} + \text{보증금} \times \frac{\text{전환율}}{12}$$
+$$\text{converted monthly rent} = \text{monthly rent} + \text{deposit} \times \frac{\text{conversion rate}}{12}$$
 
-- 전환율: 지역별 4~7% (한국부동산원 공시)
-- 또는 기회비용(예금금리+2~3%)로 내부 계산
+- Conversion rate: 4~7% by region (Korea Real Estate Board public disclosure)
+- Alternatively, calculate internally using opportunity cost (deposit rate + 2~3%)
 
-### 2. 주거용 vs 상업용 적용 차이
+### 2. Residential vs. Commercial Application Differences
 
-| 구분 | Cap Rate 적용 | 이유 |
+| Category | Cap Rate Applicability | Reason |
 |---|---|---|
-| 아파트 (자가) | ❌ 거의 안 함 | 시세차익 중심, 월세 시장 얇음 |
-| 아파트 (월세) | △ 참고 | Cap Rate 1~2.5% → 매우 낮음 |
-| 오피스텔 | ○ 적용 | 표준화된 임대 시장 |
-| 상가 | ◎ 핵심 도구 | 수익 중심 |
-| 꼬마빌딩 | ◎ 핵심 도구 | 임대·시세 복합 |
-| 원룸·고시원 | ◎ | 순수 수익형 |
+| Apartment (owner-occupied) | ❌ Rarely used | Capital gains focused, thin monthly rental market |
+| Apartment (monthly rent) | △ Reference only | Cap Rate 1~2.5% → very low |
+| Officetel | ○ Applicable | Standardized rental market |
+| Retail | ◎ Core tool | Income focused |
+| Small building (꼬마빌딩) | ◎ Core tool | Rental + capital gains hybrid |
+| Studio/goshiwon | ◎ | Pure income-producing |
 
-### 3. 한국 특수 비용
+### 3. Korea-Specific Costs
 
-- **취득세 4.6~12%** — DCF 초년도에 반영. 다주택·법인·조정지역 중과.
-- **종합부동산세** — 공시가격 기준 누진. 법인 고율.
-- **재산세** — 연 0.1~0.4%
-- **임대소득세** — 주택은 2천만원 이하 분리과세, 초과 종합과세. 상가는 부가세·소득세.
-- **건강보험료** — 지역가입자 재산·소득 반영 급등 가능
-- **대출 규제** — DSR, LTV, RTI (상가 대출은 RTI가 제약)
+- **Acquisition tax 4.6~12%** — Reflect in year 1 of DCF. Multi-home owners, corporations, and regulated regions face heavier rates.
+- **Comprehensive real estate tax (종부세)** — Progressive based on published price. High rate for corporations.
+- **Property tax (재산세)** — Annual 0.1~0.4%
+- **Rental income tax (임대소득세)** — For housing, separate taxation below 20M KRW, comprehensive taxation above. For commercial, includes VAT and income tax.
+- **Health insurance premium (건보료)** — For regional subscribers, may surge based on assets and income
+- **Loan regulations** — DSR, LTV, RTI (RTI is the binding constraint for commercial property loans)
 
-### 4. 할인율 $r$ 설정 (한국 2026 시점 가이드)
+### 4. Setting Discount Rate $r$ (Korea 2026 Guide)
 
-- 무위험(국채 3년): ~3~3.5%
-- 리스크 프리미엄: 프라임 오피스 +1.5~2%, 지방 상가 +3~5%, 꼬마빌딩 +2~3%
-- 합계: **5~8% 범위에서 시작**, 리스크에 따라 조정
+- Risk-free (3-year government bond): ~3~3.5%
+- Risk premium: Prime office +1.5~2%, regional retail +3~5%, small buildings (꼬마빌딩) +2~3%
+- Total: **Start in the 5~8% range**, adjust by risk
 
-### 5. Terminal Value 추정 시 주의
+### 5. Cautions When Estimating Terminal Value
 
-- Exit Cap Rate를 *현재 Cap Rate보다 높게* 잡는 것이 보수적 (미래 금리·리스크 상승 가정)
-- 한국 상업용 시장은 유동성 낮음 → exit 할인 추가 고려
+- Setting the Exit Cap Rate *higher than the current Cap Rate* is conservative (assuming future rate and risk increases)
+- The Korean commercial market has low liquidity → consider adding an exit discount
 
-## 사용 절차
+## Procedure
 
 ```
-1. NOI 계산
-   - GPR (임대료 × 12)
-   - 공실률 (프라임 5%, 지방 상가 10~20%)
-   - 운영비 (대략 GPR의 10~25%)
-   - 보증금은 환산월세로 포함
-2. Cap Rate 시세 비교
-   - 비슷한 물건의 최근 거래 Cap Rate
-   - 내 매물의 Cap Rate = NOI / 호가
-3. 가치 교차 검증
-   - 가격 = NOI / 시세 Cap Rate
-   - 호가 vs 계산 가격 비교
-4. DCF (5~10년)
-   - 임대료 인상률 (연 2~5%)
-   - 공실·유지비 시나리오
+1. Calculate NOI
+   - GPR (rent × 12)
+   - Vacancy rate (prime 5%, regional retail 10~20%)
+   - Operating expenses (roughly 10~25% of GPR)
+   - Include deposits as converted monthly rent
+2. Compare Cap Rate to market
+   - Cap Rate of recently transacted comparable properties
+   - My property's Cap Rate = NOI / asking price
+3. Cross-verify value
+   - Price = NOI / market Cap Rate
+   - Compare asking price vs. calculated price
+4. DCF (5~10 years)
+   - Rent increase rate (annual 2~5%)
+   - Vacancy and maintenance scenarios
    - Exit Cap Rate
-5. 레버리지 적용
-   - 대출금리·조건·RTI
-   - Cash-on-Cash 계산
-6. 세후 수익률
-   - 취득세, 종부세, 임대소득세 반영
-   - 실효 수익률 (IRR)
+5. Apply leverage
+   - Loan rate, terms, RTI
+   - Calculate Cash-on-Cash
+6. After-tax return
+   - Reflect acquisition tax, comprehensive real estate tax, rental income tax
+   - Effective return (IRR)
 ```
 
-## 한국 맥락 예시
+## Korean Context Example
 
-**질문**: "서울 외곽 꼬마빌딩 30억, 월세 900 + 보증금 5억, 살까?"
+**Question**: "A small building (꼬마빌딩) in Seoul's outskirts costs 3B KRW, with 9M monthly rent + 500M deposit. Should I buy?"
 
-**Cap Rate 계산**:
-- GPR: 900만 × 12 = 1.08억
-- 보증금 환산: 5억 × 5% / 12 × 12 = 2,500만
-- 실효 임대수익: 1.33억
-- 공실 5%, 운영비 15% → NOI ≈ 1.06억
-- Cap Rate = 1.06 / 30 = **3.5%**
+**Cap Rate Calculation**:
+- GPR: 9M × 12 = 108M
+- Deposit conversion: 500M × 5% / 12 × 12 = 25M
+- Effective rental income: 133M
+- Vacancy 5%, operating expenses 15% → NOI ≈ 106M
+- Cap Rate = 106M / 3B = **3.5%**
 
-**판단**:
-- 서울 외곽 꼬마빌딩 시세 Cap Rate 3.5~4.5% — 하단
-- 대출 금리 4.5% 가정 → negative leverage (자기자본 수익률 악화)
-- 시세차익 기대 없으면 매력 약함
-- 5년 DCF에서 임대료 연 3% 인상, Exit Cap 4.0% 가정 시 IRR 계산 필요
+**Judgment**:
+- Seoul outskirts small building (꼬마빌딩) market Cap Rate is 3.5~4.5% — at the lower bound
+- Assuming 4.5% loan rate → negative leverage (equity return deteriorates)
+- Without capital gains expectations, appeal is weak
+- In 5-year DCF, need to calculate IRR assuming 3% annual rent increases and 4.0% Exit Cap
 
-**질문 되돌리기**: "왜 이 매물인가? 시세차익 기대? 리노베이션 여지? 상권 변화 예측?" — 순수 수익률만으론 부족.
+**Turn the question back**: "Why this property? Capital gains expectation? Renovation potential? Commercial district change forecast?" — Pure yield alone is insufficient.
 
-## 한계
+## Limitations
 
-1. **시세차익 누락** — 한국은 capital gain이 수익의 큰 비중. NOI만으론 과소평가.
-2. **임대료 경직성** — 계약 갱신 시 인상 제한(5%룰 등 주거용).
-3. **공실·부실 세입자 리스크** — 평균치로만 계산하면 위험 과소.
-4. **할인율의 임의성** — $r$ 0.5%만 달라져도 가치 크게 변동. 민감도 분석 필수.
-5. **한국 상업용 데이터 얇음** — Cap Rate 비교 표본 작아 신뢰구간 넓음.
-6. **주거용엔 부적합** — 아파트 Cap Rate 해석은 오해 소지.
+1. **Capital gains omission** — In Korea, capital gains comprise a large portion of returns. NOI alone underestimates value.
+2. **Rent rigidity** — Increase limits upon contract renewal (e.g., 5% rule for residential).
+3. **Vacancy and defaulting tenant risk** — Calculating only with averages underestimates risk.
+4. **Arbitrariness of discount rate** — Even a 0.5% change in $r$ causes significant value swings. Sensitivity analysis is essential.
+5. **Thin Korean commercial data** — Small sample size for Cap Rate comparisons yields wide confidence intervals.
+6. **Inappropriate for residential** — Apartment Cap Rate interpretation risks misunderstanding.
 
-## 이 프레임워크가 *틀렸을 때*
+## When This Framework is *Wrong*
 
-- 아파트 가격 분해 → `hedonic-pricing`
-- 재건축으로 용도 변경 가치 → `highest-best-use` + `redevelopment-feasibility`
-- 시장 사이클 위치 → `harrison-cycle`
-- 공급·재고 전환 → `dipasquale-wheaton`
+- Apartment price decomposition → `hedonic-pricing`
+- Use conversion value through reconstruction → `highest-best-use` + `redevelopment-feasibility`
+- Market cycle positioning → `harrison-cycle`
+- Supply/inventory transitions → `dipasquale-wheaton`
 
-## 추가 학습 자료
+## Further Learning Resources
 
-- Brueggeman, W. & Fisher, J. *Real Estate Finance and Investments.* — 표준 교재.
-- PwC/Korpacz Real Estate Investor Survey — Cap Rate 벤치마크.
-- 국내: 한국부동산원 상업용 부동산 임대시장 동향, 젠스타메이트 Cap Rate 리포트.
+- Brueggeman, W. & Fisher, J. *Real Estate Finance and Investments.* — Standard textbook.
+- PwC/Korpacz Real Estate Investor Survey — Cap Rate benchmarks.
+- Domestic: Korea Real Estate Board commercial real estate rental market trends, Genstar Mate Cap Rate reports.

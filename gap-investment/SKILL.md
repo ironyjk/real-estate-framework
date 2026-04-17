@@ -1,265 +1,265 @@
 ---
 name: gap-investment
 version: "0.1.0"
-description: "갭투자 구조 — 전세 레버리지를 이용한 주택 투자 모델. 전세가율, 역전세 리스크, ROE, 현금흐름 추적, 한국 전세 제도의 경제학적 해부."
+description: "Gap Investment Structure — a housing investment model using jeonse (전세) leverage. Jeonse-to-price ratio, reverse-gap risk, ROE, cash flow tracking, and an economic dissection of the Korean jeonse system."
 ---
 
-# 갭투자 (Gap Investment) 구조
+# Gap Investment (갭투자) Structure
 
-## 한 줄 요약
+## One-Line Summary
 
-**매매가 − 전세가 = 갭(자기자본)**. 전세금을 *무이자 대출*처럼 써서 주택을 매입. 매매가 상승 시 레버리지 극대, 하락 시 역전세·깡통 리스크.
+**Sale price − Jeonse deposit = Gap (equity)**. The jeonse deposit is used as an *interest-free loan* to purchase a home. When sale prices rise, leverage is maximized; when they fall, reverse-gap (역전세) and "underwater jeonse" (깡통 전세) risks emerge.
 
-## 이론적 위치
+## Theoretical Position
 
-- 한국 특수 제도(전세)가 만든 구조. 영미권 buy-to-let과 다름 (그쪽은 이자 대출 기반).
-- 학계 이론 없음. **금융공학 관점에서 풋옵션 숏 + 주택 롱 포지션**으로 해석 가능.
-- 전세보증금 = 무이자 무담보 단기 부채. 세입자 입장에선 *원금 보장 저축* 대용.
+- A structure created by Korea's unique jeonse (전세) system. Different from Anglo buy-to-let (which is interest-bearing-loan-based).
+- No formal academic theory. **From a financial engineering perspective, can be interpreted as a short put option + long housing position.**
+- Jeonse deposit = interest-free, unsecured short-term debt. From the tenant's perspective, it serves as a *principal-guaranteed savings* substitute.
 
-## 핵심 구조
+## Core Structure
 
-### 1. 기본 공식
+### 1. Basic Formula
 
-$$\text{갭} = \text{매매가} - \text{전세보증금}$$
-$$\text{전세가율} = \frac{\text{전세가}}{\text{매매가}} \times 100\%$$
+$$\text{Gap} = \text{Sale Price} - \text{Jeonse Deposit}$$
+$$\text{Jeonse-to-Price Ratio} = \frac{\text{Jeonse Price}}{\text{Sale Price}} \times 100\%$$
 
-- 전세가율 0.7 → 갭 30%
-- 전세가율 0.9 → 갭 10% (극한 레버리지)
+- Jeonse-to-price ratio 0.7 → Gap 30%
+- Jeonse-to-price ratio 0.9 → Gap 10% (extreme leverage)
 
-### 2. 수익률 (단순)
+### 2. Return (Simplified)
 
-$$\text{ROE} = \frac{\text{매매가 상승분} - \text{비용}}{\text{갭(자기자본)}}$$
+$$\text{ROE} = \frac{\text{Sale Price Appreciation} - \text{Costs}}{\text{Gap (Equity)}}$$
 
-예: 매매 10억, 전세 8억, 갭 2억. 매매가 10% 상승 (11억) 시:
-$$\text{ROE} = \frac{1억 - \text{비용}}{2억} = 50\% (대략)$$
+Example: Sale 1B KRW, jeonse 800M, gap 200M. If sale price rises 10% (to 1.1B):
+$$\text{ROE} = \frac{100M - \text{Costs}}{200M} = 50\% \text{ (approx.)}$$
 
-레버리지 5배 효과.
+5x leverage effect.
 
-### 3. 비용 구조
+### 3. Cost Structure
 
-| 항목 | 대략 |
+| Item | Approx. |
 |---|---|
-| 취득세 | 1~4% (규제지역 다주택 8~12%) |
-| 중개수수료 | 0.4~0.6% (매매 시) |
-| 법무비·인지 | 소액 |
-| 보유 기간 재산세·종부세 | 연 0.1~2% (다주택 중과) |
-| 임대소득세 | 2천만원 이하 분리과세 가능 |
-| 수선·도배·장판 | 세입자 교체 시 |
-| 매도 시 양도세 | 보유·다주택 여부 따라 6~45% |
+| Acquisition tax | 1~4% (8~12% for multi-home owners in regulated zones) |
+| Brokerage commission | 0.4~0.6% (at sale) |
+| Legal/stamp fees | Small amount |
+| Property tax & comprehensive real estate tax (종부세) during holding | 0.1~2% annually (heavy surcharge for multi-home owners) |
+| Rental income tax | Separate taxation possible if under 20M KRW |
+| Repairs, wallpaper, flooring | At tenant turnover |
+| Capital gains tax at sale | 6~45% depending on holding period and multi-home status |
 
-### 4. 전세 갱신·반환 사이클
+### 4. Jeonse Renewal & Refund Cycle
 
-- 2년마다 재계약 (세입자 계약갱신요구권 1회 2년 추가 = 최대 4년)
-- 갱신 시 전세금 증액 5% 한도 (임대차 3법, 규제 완화 논의 중)
-- 세입자 이주 시 전세금 반환 의무 → 새 세입자 또는 본인 자금 필요
+- Re-contract every 2 years (tenant's contract renewal request right grants 1x extension of 2 more years = up to 4 years total)
+- 5% cap on jeonse increase at renewal (Three Tenancy Acts (임대차 3법); deregulation under discussion)
+- Obligation to refund jeonse deposit when tenant moves out → either find new tenant or use own funds
 
-## 주요 리스크
+## Major Risks
 
-### 1. 역전세 (Reverse Gap)
+### 1. Reverse Gap (역전세, Reverse Gap)
 
-$$\text{역전세 부담} = \text{기존 전세금} - \text{신규 전세금}$$
+$$\text{Reverse Gap Burden} = \text{Existing Jeonse} - \text{New Jeonse}$$
 
-- 전세 시세 하락 시 발생
-- 세입자 이주 요구 시 *차액을 본인이 부담해야* 함
-- 2022~2024 수도권·지방 광역시 역전세난 현실화
-- **HUG 전세보증금 반환보증 126%룰 (2023.5~)**:
-  - 공시가격 × 126% 이내여야 보증 가입 가능 (2022년까지는 150%였음)
-  - 초과 시 세입자가 보증 미가입 → 전세 기피 → 전세가 하락 → 집주인 타격
-  - *구축·고가 전세 매물은 보증 미가입 전세가로 재설정 압력* (공시가의 126% 한도)
-- 2026.4 현재 HUG 보증사고 누적 → 보증료 인상·요건 강화 방향. 정기 확인 필수
+- Occurs when jeonse market price drops
+- When tenant requests to move out, *the difference must be paid by the owner*
+- Reverse-gap crisis materialized in Seoul Metro and provincial metropolitan areas in 2022~2024
+- **HUG Jeonse Deposit Refund Guarantee 126% Rule (effective May 2023)**:
+  - Eligible for guarantee only if within 126% of officially appraised price (was 150% until 2022)
+  - If exceeded, tenant cannot obtain guarantee → tenants avoid → jeonse price falls → owner takes hit
+  - *Older or high-priced jeonse listings face pressure to reset jeonse to non-guaranteed levels* (capped at 126% of official price)
+- As of April 2026, accumulated HUG guarantee accidents → trending toward higher premiums and stricter requirements. Periodic verification essential.
 
-### 2. 깡통 전세
+### 2. Underwater Jeonse (깡통 전세)
 
-- 매매가 ≤ 전세금 상태
-- 매도해도 전세금 상환 부족
-- 경매 시 우선순위 문제 (전세권·확정일자)
+- State where sale price ≤ jeonse deposit
+- Even after selling, insufficient to repay jeonse
+- Priority issues at auction (jeonse rights/fixed-date confirmation)
 
-### 3. 금리 리스크
+### 3. Interest Rate Risk
 
-- 전세자금 대출 금리 상승 → 세입자 부담 ↑ → 월세 선호·전세 수요 ↓ → 전세가 하락
-- 집주인 본인 대출 있으면 이중 부담
+- Rising jeonse loan rates → increased tenant burden ↑ → preference for monthly rent · jeonse demand ↓ → jeonse price falls
+- Double burden if owner also has loans
 
-### 4. 세제 리스크
+### 4. Tax Risk
 
-- 다주택자 종부세·양도세 중과
-- 법인 명의는 특히 높음
-- 정책 변화에 취약 (2020~2022 중과 강화 → 2023 완화 논의)
+- Comprehensive real estate tax (종부세) and capital gains tax surcharges for multi-home owners
+- Especially high under corporate ownership
+- Vulnerable to policy changes (2020~2022 surcharge intensification → 2023 deregulation discussions)
 
-### 5. 유동성 리스크
+### 5. Liquidity Risk
 
-- 매도 원할 때 시장 냉각 → 처분 어려움
-- 급매 할인 10~20%
-- 전세 끼고 매도 시 가격 할인 더 큼
+- Market cooling when wishing to sell → difficult disposal
+- Distressed sale discount of 10~20%
+- Larger price discount when selling with jeonse attached
 
-## 언제 쓰나 (분석 도구로서)
+## When to Use (As an Analytical Tool)
 
-- 본인 또는 지인의 갭투자 의사결정
-- 역전세 시나리오 대응
-- 전세가율이 시장 전반에서 의미하는 바 해석
-- 다주택자 포지션 리스크 평가
-- 매도 vs 계속 보유 판단
+- Personal or peer's gap investment decision-making
+- Reverse-gap scenario response
+- Interpreting what jeonse-to-price ratio means market-wide
+- Risk assessment of multi-home owner positions
+- Sell vs. continue-holding judgment
 
-## 한국 시장 적용 포인트
+## Korean Market Application Points
 
-### 1. 전세가율 해석 가이드
+### 1. Jeonse-to-Price Ratio Interpretation Guide
 
-| 전세가율 | 해석 | 함의 |
+| Jeonse-to-Price Ratio | Interpretation | Implication |
 |---|---|---|
-| 80% 이상 | 매매가 정체·하락 신호, 갭투자 과열 | 조정 임박 가능성 |
-| 65~80% | 정상 범위 | 중립 |
-| 50~65% | 매매 상승 기대 반영 | 상승장 초중반 |
-| 50% 이하 | 거품 또는 전세 시장 특수 상황 | 매매가 고평가 의심 |
+| 80%+ | Sale price stagnation/decline signal, gap investment overheating | Possibility of imminent correction |
+| 65~80% | Normal range | Neutral |
+| 50~65% | Expectations of sale price increase priced in | Early-mid bull market |
+| Below 50% | Bubble or special jeonse market situation | Suspect sale price overvaluation |
 
-### 2. 갭투자 ROE의 함정
+### 2. Pitfalls of Gap Investment ROE
 
-- **상승장에만 유리**. 하락장은 손실 레버리지 동일 배수.
-- 계산에 *역전세 자금 조달 비용* 누락 흔함.
-- 비용(취득세·보유세·양도세)은 수익의 30~60% 차감 가능 — 세후 ROE로 계산.
+- **Favorable only in bull markets**. In bear markets, the loss is leveraged at the same multiple.
+- *Reverse-gap funding cost* often omitted from calculations.
+- Costs (acquisition tax, holding tax, capital gains tax) can deduct 30~60% of returns — calculate after-tax ROE.
 
-### 3. 2023~ 전세 시장 구조 변화
+### 3. Structural Changes in the Jeonse Market Since 2023
 
-- 전세사기 여파로 *전세 기피* 현상
-- 월세 비중 증가 (보증금+월세 혼합)
-- **순수 갭투자 환경 악화**
-- 계약갱신요구권·전월세상한제로 전세금 증액 제한
-- 일부 지역은 "갭 + 월세" 혼합 구조 필요
+- *Jeonse avoidance* phenomenon due to jeonse fraud aftermath
+- Increased share of monthly rent (deposit + monthly rent hybrid)
+- **Pure gap investment environment deteriorated**
+- Jeonse increase limits via contract renewal request right and jeonse/monthly rent cap
+- Some regions require "gap + monthly rent" hybrid structure
 
-### 4. 다주택자 중과 체계 (2026.4 기준, 변동 가능)
+### 4. Multi-Home Owner Surcharge System (as of April 2026, subject to change)
 
-- **취득세**:
-  - 현행 법정세율: 조정지역 2주택 8%, 3주택 이상 12% (2020.8 시행)
-  - 2022.12.21 정부 완화안 발표: 2주택 일반세율(1~3%), 3주택 4%, 4주택+·법인 6% — *지방세법 개정안 국회 계류, 2026.4 기준 입법 여부 재확인 필요*
-  - 생애최초 취득세 200만원 한도 감면 (2022~)
-- **양도세**:
-  - 2주택 20%p 가산, 3주택+ 30%p 가산
-  - 2022.5~2026.5 한시 배제 (다주택 중과 유예 — 재연장 여부 정치 이슈)
-  - 장기보유특별공제 15년 최대 30% (다주택은 배제)
-- **종부세**: 공시가격 합산 누진, 1세대1주택 12억 공제, 다주택 9억. 법인은 고율.
-- **DSR (총부채원리금상환비율)**:
-  - 스트레스 DSR: 1단계 2024.2 (은행 주담대), **2단계 2024.9** (2금융권·신용대출 확대), **3단계 2025.7** (전 업권 전면 적용, 금리 가산치 1.5%p)
-  - 연소득 대비 DSR 40%(은행)·50%(2금융) 한도
-  - *갭투자는 본인 대출 적어 직접 제약 작으나, 매도 시 매수자 대출 제약 → 매도가·유동성 타격*
-- **생애최초 LTV 80%** (2022~): 투기지역 포함 전지역, 가격 제한 없음. 대출 한도 6억. 갭투자 경쟁자에게 유리한 환경.
-- *현 시점 규정은 반드시 세무사·대출상담 확인*
+- **Acquisition tax**:
+  - Current statutory rate: 8% for 2 homes in regulated zone, 12% for 3+ homes (effective Aug 2020)
+  - Government deregulation proposal announced Dec 21, 2022: general rate (1~3%) for 2 homes, 4% for 3 homes, 6% for 4+ homes/corporations — *Local Tax Act amendment pending in National Assembly; legislative status as of April 2026 requires re-verification*
+  - First-time-acquisition acquisition tax exemption capped at 2M KRW (2022~)
+- **Capital gains tax**:
+  - +20%p surcharge for 2 homes, +30%p surcharge for 3+ homes
+  - Temporarily exempted May 2022 ~ May 2026 (multi-home surcharge moratorium — extension is a political issue)
+  - Long-term holding special deduction up to 30% over 15 years (excluded for multi-home owners)
+- **Comprehensive real estate tax (종부세)**: Progressive on aggregated official prices, 1.2B KRW deduction for single-household single-home, 900M for multi-home. High rates for corporations.
+- **DSR (Debt Service Ratio)**:
+  - Stress DSR: Phase 1 Feb 2024 (bank mortgage loans), **Phase 2 Sep 2024** (expanded to secondary financial sector and credit loans), **Phase 3 Jul 2025** (full application across all sectors, 1.5%p rate add-on)
+  - DSR cap of 40% (banks) / 50% (secondary) relative to annual income
+  - *Gap investment has small direct constraints due to low personal borrowing, but at sale, buyer's loan constraints → impact on sale price and liquidity*
+- **First-time-acquisition LTV 80%** (2022~): All regions including speculation zones, no price limit. Loan cap 600M KRW. Favorable environment for gap investment competitors.
+- *Current regulations must be confirmed with tax accountant and loan consultant*
 
-### 5. 역전세 대응 옵션
+### 5. Reverse-Gap Response Options
 
-- 자금 조달: 신용대출·전세자금반환대출·기존 주택 담보대출
-- 신규 세입자 찾기: 전세 → 반전세 전환
-- 매도: 전세 낀 매도 (할인) 또는 공실화 후 매도
-- 본인 거주 전환
+- Funding: credit loans · jeonse deposit refund loans · existing home mortgage loans
+- Find new tenant: convert jeonse → semi-jeonse (반전세, deposit + monthly rent)
+- Sell: sell with jeonse attached (discount) or vacate then sell
+- Convert to owner-occupied
 
-## 매수 전 실사 체크리스트
+## Pre-Purchase Due Diligence Checklist
 
-### 등기부 확인 (세입자로서 + 매수자로서)
-- [ ] **갑구**: 소유권 변동 이력, 가압류·가처분·경매개시 여부
-- [ ] **을구**: 근저당·전세권·임차권등기 — *선순위 채권 합 + 내 전세금 ≤ 시세 70%*가 안전 기준
-- [ ] 신탁 등기 여부 — 신탁 물건은 수탁자 동의 없이 전세 계약 시 보증 거부
-- [ ] **건축물대장** vs 등기부 일치 — 무허가 증축·위반건축물 확인
-- [ ] 공시가격 × 126% vs 전세가 (HUG 보증 가능 여부)
+### Registry Verification (As Tenant + As Buyer)
+- [ ] **Section 1 (갑구)**: Ownership change history, presence of provisional attachment/disposition/auction commencement
+- [ ] **Section 2 (을구)**: Mortgage·jeonse rights·tenancy registration — *senior claim total + my jeonse deposit ≤ 70% of market price* is the safety standard
+- [ ] Trust registration status — trust properties require trustee consent; jeonse contracts without it cause guarantee denial
+- [ ] **Building register** vs registry consistency — verify unauthorized extensions and illegal buildings
+- [ ] Official price × 126% vs jeonse price (HUG guarantee eligibility)
 
-### 매도 시뮬레이션
-- [ ] 전세 낀 매도 vs 공실 후 매도의 예상 가격 차이 (통상 5~15% 할인)
-- [ ] 매도 소요 기간 (수도권 평균 3~6개월, 지방 6~12개월, 하락장 12개월+)
-- [ ] 동일 단지 **최근 6개월 거래 건수** (유동성 지표) — 0~1건이면 매도 난이도 높음
-- [ ] 호가-실거래 괴리 (호가 허수 vs 진짜 시세)
+### Sale Simulation
+- [ ] Expected price difference: sell with jeonse attached vs sell after vacating (typically 5~15% discount)
+- [ ] Time required to sell (Seoul metro avg. 3~6 months, provinces 6~12 months, bear market 12+ months)
+- [ ] **Number of transactions in the same complex over the past 6 months** (liquidity indicator) — 0~1 transactions means high difficulty selling
+- [ ] Asking-actual price gap (asking price illusion vs true market price)
 
-### 세입자 리스크
-- [ ] 기존 세입자 **전세금 반환 일정** (계약 만기, 갱신청구권 사용 여부)
-- [ ] 이사 일정·이사비·수선비 부담 구분
-- [ ] 세입자 직업·소득 안정성 (전세자금대출 연체 시 분쟁)
+### Tenant Risk
+- [ ] Existing tenant's **jeonse refund schedule** (contract expiration, whether renewal request right has been used)
+- [ ] Allocation of moving schedule, moving cost, repair cost burden
+- [ ] Tenant's occupation/income stability (disputes if jeonse loan goes delinquent)
 
-## 사용 절차 (의사결정 시)
+## Procedure for Use (At Decision-Making Time)
 
 ```
-1. 갭 규모·레버리지 계산
-   - 매매가 - 전세가 = 갭
-   - 본인 가용 자금 대비 갭 비율
+1. Calculate gap size and leverage
+   - Sale price - jeonse price = gap
+   - Gap ratio relative to own available funds
 
-2. 시나리오 분석 (3가지)
-   - 상승 10%, 정체 0%, 하락 10%
-   - 각 시나리오 ROE·손실액·현금흐름
+2. Scenario analysis (3 cases)
+   - Up 10%, flat 0%, down 10%
+   - ROE, loss amount, cash flow per scenario
 
-3. 역전세 스트레스 테스트
-   - 전세가 -10%, -20%, -30% 시 반환 부담
-   - 본인 현금·대출 여력 vs 부담
-   - 견디는 기간 (2년 동안 역전세 발생 시?)
+3. Reverse-gap stress test
+   - Refund burden when jeonse falls -10%, -20%, -30%
+   - Own cash and loan capacity vs burden
+   - Endurance period (what if reverse-gap happens within 2 years?)
 
-4. 세후 수익률
-   - 취득세·보유세·양도세 모두 차감
-   - 보유 기간별 시나리오
+4. After-tax return
+   - Deduct all of: acquisition tax, holding tax, capital gains tax
+   - Scenarios by holding period
 
-5. 유동성 체크
-   - 매도 소요 시간 (시장 상황별)
-   - 급매 할인율
+5. Liquidity check
+   - Time required to sell (by market condition)
+   - Distressed sale discount rate
 
-6. 본인 포지션 적합성
-   - 현금 흐름 감당 가능?
-   - 2~3년 내 자금 필요 발생 위험?
-   - 가족·직업 변화 리스크
+6. Personal position fit
+   - Can cash flow be sustained?
+   - Risk of needing funds within 2~3 years?
+   - Family/career change risks
 ```
 
-## 한국 맥락 예시
+## Korean Context Examples
 
-**질문**: "수도권 아파트 8억, 전세 6억 매물. 갭 2억으로 들어가도 되나?"
+**Question**: "Seoul metro apartment 800M KRW, jeonse 600M. Should I enter with a 200M gap?"
 
-**분석**:
-- 전세가율 75% → 정상 범위 상단
-- 취득세 (2주택·조정지역 가정) 8% = 6,400만 추가 필요 → **실질 자기자본 2.64억**
-- 시나리오:
-  - 상승 10% (9.4억 - 8억) = 1.4억 - 양도세 → 세후 약 9천 → ROE 34%
-  - 정체 0%: 보유세·수선비 누적 연 100~200만, 5년이면 -500~1000만 → 손실
-  - 하락 10% (7.2억): 0.8억 손실, 본인 자기자본 2억 대비 **40% 손실** (계산상)
-- 역전세 스트레스: 전세 6억 → 5억으로 하락 시 1억 추가 자금 필요. *가능한가?*
+**Analysis**:
+- Jeonse-to-price ratio 75% → upper end of normal range
+- Acquisition tax (assuming 2 homes, regulated zone) 8% = additional 64M needed → **effective equity 264M**
+- Scenarios:
+  - Up 10% (940M - 800M) = 140M - capital gains tax → after-tax approx 90M → ROE 34%
+  - Flat 0%: holding tax/repairs accumulating 1~2M annually, -5~10M over 5 years → loss
+  - Down 10% (720M): 80M loss, **40% loss** relative to own equity of 200M (per calculation)
+- Reverse-gap stress: if jeonse drops 600M → 500M, additional 100M funding needed. *Possible?*
 
-**판단 체크리스트**:
-- [ ] 2년 후 역전세 1억 감당 가능?
-- [ ] 다주택 종부세 연 몇백만원 감당?
-- [ ] 5년 이상 보유 의지?
-- [ ] 시장 상승 전망 근거?
-- [ ] 기회비용(다른 투자) 비교?
+**Decision Checklist**:
+- [ ] Can you absorb 100M reverse-gap in 2 years?
+- [ ] Can you absorb several million KRW in annual multi-home comprehensive real estate tax (종부세)?
+- [ ] Willingness to hold 5+ years?
+- [ ] Basis for market upturn outlook?
+- [ ] Comparison of opportunity cost (other investments)?
 
-모두 Yes 아니면 **재고**.
+If not all Yes, **reconsider**.
 
-**질문**: "이미 갭투자 보유 중, 역전세 5천 발생 — 어떻게?"
+**Question**: "Already holding a gap investment, 50M reverse-gap occurred — what now?"
 
-**대응 순서**:
-1. 즉시 가용 현금 확인
-2. 신규 세입자 후보 탐색 (반전세 전환 가능?)
-3. 전세자금반환대출 가능성 (은행별 상품 다름)
-4. 기존 주택 담보대출 여력 (LTV·DSR)
-5. 매도 가능성 (전세 낀 매도 vs 공실화 후 매도 비용 비교)
-6. **세입자와 협상**: 계약 연장 + 기존 전세가 유지 조건
+**Response Order**:
+1. Verify immediately available cash
+2. Search for new tenant candidates (semi-jeonse conversion possible?)
+3. Jeonse deposit refund loan eligibility (varies by bank product)
+4. Existing home mortgage loan capacity (LTV·DSR)
+5. Sale possibility (cost comparison: sale with jeonse attached vs sale after vacating)
+6. **Negotiate with tenant**: contract extension + maintain existing jeonse price as a condition
 
-→ 가장 피해야 할 것: 전세 보증금 반환 지연 → 법적 분쟁·신용·평판.
+→ Most to be avoided: delay in jeonse deposit refund → legal disputes, credit damage, reputation harm.
 
-## 한계 (이 프레임워크의)
+## Limitations (of This Framework)
 
-1. **상승장 편향** — 2014~2021 수도권 상승장이 만든 모델. 인구·구조 변화 시대에 적용 한계.
-2. **심리·정치 요인** — 전세 제도 자체 개혁 논의가 모델 전제를 흔들 수 있음.
-3. **지역 편차 극심** — 수도권과 지방·규제지역과 비규제지역 완전 다른 게임.
-4. **세제 복잡성** — 개인·법인·주택수·보유기간·규제지역 조합에 따라 세후 수익 급변.
-5. **전세사기 외부효과** — 일부 사례가 시장 전체 신뢰 훼손.
-6. **규제 방향 불확실** — 계약갱신·상한제·보증의무·반환보증 의무화 등 정책 변수.
+1. **Bull market bias** — A model created by the 2014~2021 Seoul metro bull market. Limited applicability in an era of demographic and structural change.
+2. **Psychological and political factors** — Discussions of jeonse system reform itself can shake the model's premise.
+3. **Extreme regional disparity** — Seoul metro vs provinces, regulated vs non-regulated zones are completely different games.
+4. **Tax complexity** — After-tax returns shift dramatically depending on combinations of individual/corporate, number of homes, holding period, and regulated zone.
+5. **Jeonse fraud externalities** — Some cases damage trust in the entire market.
+6. **Regulatory direction uncertainty** — Policy variables include contract renewal, cap system, mandatory guarantees, refund guarantee mandates, etc.
 
-## 이 프레임워크가 *틀렸을 때*
+## When This Framework Is *Wrong*
 
-- 단일 매물 가치 정밀 평가 → `hedonic-pricing`, `cap-rate-dcf`
-- 매매·전세 시장 상호작용 구조 → `dipasquale-wheaton`
-- 사이클 타이밍 → `harrison-cycle`
-- 실거주·학군 판단 → `hedonic-pricing`, `alonso-muth-mills`
+- Precise valuation of a single property → `hedonic-pricing`, `cap-rate-dcf`
+- Structure of sale and jeonse market interaction → `dipasquale-wheaton`
+- Cycle timing → `harrison-cycle`
+- Owner-occupied/school district decisions → `hedonic-pricing`, `alonso-muth-mills`
 
-## 추가 학습 자료
+## Additional Learning Materials
 
-- 주택임대차보호법, 임대차 3법 원문.
-- 한국부동산원 전월세가격지수, 전세가율 통계.
-- HUG 전세보증금 반환보증 제도.
-- **주의**: 유튜브·블로그의 "갭투자 성공기"는 상승장 샘플. 하락장 실패 사례(전세사기·역전세 파산)는 언론에 체계적으로 덜 노출됨. 실제 리스크 분포를 왜곡할 수 있음.
+- Original text of the Housing Lease Protection Act, Three Tenancy Acts (임대차 3법).
+- Korea Real Estate Board's monthly rent and jeonse price index, jeonse-to-price ratio statistics.
+- HUG Jeonse Deposit Refund Guarantee system.
+- **Caution**: "Gap investment success stories" on YouTube and blogs are bull-market samples. Bear-market failure cases (jeonse fraud, reverse-gap bankruptcy) are systematically less exposed in media. May distort the actual risk distribution.
 
-## 윤리·법적 주의
+## Ethical & Legal Cautions
 
-갭투자 자체는 합법이나:
-- 전세금 반환 의무 불이행 시 민·형사 책임
-- 전세사기(기망·고의) 경우 형사 처벌
-- 세입자 권리 존중·정보 고지 의무
-- 이 프레임워크는 *본인 자산 관리용* 분석 도구이며, 세입자 대상 투기 조장 아님.
+Gap investment itself is legal, but:
+- Civil/criminal liability for failure to fulfill jeonse refund obligation
+- Criminal punishment for jeonse fraud (deception, intent)
+- Duty to respect tenant rights and disclose information
+- This framework is an analytical tool *for managing one's own assets*, not for inciting speculation targeting tenants.

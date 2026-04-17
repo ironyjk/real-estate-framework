@@ -1,220 +1,220 @@
 ---
 name: subscription-points
 version: "0.1.0"
-description: "청약 가점제 전략 — 가점 계산(무주택/부양가족/통장), 일반공급·특별공급 선택, 추첨제 조합, 특공 적합성 판단. 한국 청약 제도가 만든 게임이론."
+description: "Subscription (청약) points system strategy — points calculation (non-homeownership, dependents, account), general vs. special supply selection, lottery combinations, special supply eligibility assessment. The game theory created by Korea's subscription system."
 ---
 
-# 청약 가점제 전략
+# Subscription (청약) Points Strategy
 
-## 한 줄 요약
+## One-Line Summary
 
-청약은 **가점 + 자격 + 타이밍**의 게임. 본인 가점·자격에 맞는 풀(pool)을 찾고, 당첨 확률 높은 단지를 선별하는 것이 핵심.
+Subscription (청약) is a game of **points + eligibility + timing**. The key is finding the pool that matches your points and eligibility, and selecting complexes with high winning probability.
 
-## 제도 개관
+## Regulatory Overview
 
-- 근거법: **주택법**, 주택공급에 관한 규칙.
-- 시행: **한국부동산원 청약홈** (applyhome.co.kr).
-- 목적: 무주택·실수요자 우선 주택 공급.
+- Legal basis: **Housing Act (주택법)**, Rules on Housing Supply.
+- Administered by: **Korea Real Estate Board Subscription Home (한국부동산원 청약홈)** (applyhome.co.kr).
+- Purpose: Priority housing supply for non-homeowners and actual-demand buyers.
 
-## 가점 계산 (만점 84점)
+## Points Calculation (Max 84 points)
 
-### 1. 무주택 기간 (최대 32점)
-- 만 30세 이후 무주택 기간 인정
-- 결혼 시 혼인신고일부터 인정 (만 30세 전에 결혼했어도)
-- 1년마다 2점 가산 (1년 미만 2점, 15년 이상 32점)
-- **주택 소유 전력** 있으면 매각 후 재기산
+### 1. Non-Homeownership Period (Max 32 points)
+- Non-homeownership period recognized from age 30
+- Upon marriage, recognized from marriage registration date (even if married before age 30)
+- 2 points added per year (less than 1 year: 2 points, 15+ years: 32 points)
+- If **prior home ownership** history exists, recalculated from date of sale
 
-### 2. 부양가족 수 (최대 35점)
-- 본인 제외 부양가족
-- 배우자·직계존속(3년 이상 동일 주민등록)·직계비속(만 30세 미만 미혼)
-- 0명 5점, 1명 10점, ..., 6명 이상 35점
-- **자녀 수가 가장 큰 변수**
+### 2. Number of Dependents (Max 35 points)
+- Dependents excluding the applicant
+- Spouse, lineal ascendants (same household registration for 3+ years), lineal descendants (unmarried, under age 30)
+- 0 persons: 5 points, 1 person: 10 points, ..., 6+ persons: 35 points
+- **Number of children is the biggest variable**
 
-### 3. 청약통장 가입 기간 (최대 17점)
-- 6개월 미만 1점, 6개월~1년 2점, ..., 15년 이상 17점
-- **명의 변경 시 가점 승계** (부부 간, 세대주 변경)
+### 3. Subscription Account Holding Period (Max 17 points)
+- Less than 6 months: 1 point, 6 months–1 year: 2 points, ..., 15+ years: 17 points
+- **Points transfer upon name change** (between spouses, household head change)
 
-## 공급 유형
+## Supply Types
 
-### 일반공급
+### General Supply
 
-| 유형 | 가점제 비율 | 추첨제 비율 |
+| Type | Points System Ratio | Lottery Ratio |
 |---|---|---|
-| 투기과열지구 60㎡ 이하 | 40% | 60% (2023.4 개편) |
-| 투기과열지구 60~85㎡ | 70% | 30% |
-| 투기과열지구 85㎡ 초과 | 80% | 20% (고가점자 위주) |
-| 조정대상지역 60㎡ 이하 | 0% | 100% |
-| 조정대상지역 60~85㎡ | 30% | 70% |
-| 조정대상지역 85㎡ 초과 | 50% | 50% |
-| 비규제지역 85㎡ 이하 | 40% | 60% |
-| 비규제지역 85㎡ 초과 | 추첨 100% | — |
+| Speculative Overheated District, 60㎡ or less | 40% | 60% (2023.4 reform) |
+| Speculative Overheated District, 60–85㎡ | 70% | 30% |
+| Speculative Overheated District, over 85㎡ | 80% | 20% (high-point holders dominant) |
+| Adjustment Target Area, 60㎡ or less | 0% | 100% |
+| Adjustment Target Area, 60–85㎡ | 30% | 70% |
+| Adjustment Target Area, over 85㎡ | 50% | 50% |
+| Non-regulated area, 85㎡ or less | 40% | 60% |
+| Non-regulated area, over 85㎡ | Lottery 100% | — |
 
-*2024년 이후 규제지역 범위·비율 변동 있음 — 청약 시점 기준 재확인 필수*
+*Regulated area scope and ratios have changed since 2024 — must reconfirm based on subscription (청약) timing*
 
-### 특별공급 (특공, 2026.4 기준)
+### Special Supply (특공, as of 2026.4)
 
-| 유형 | 대상 | 비중 |
+| Type | Eligibility | Share |
 |---|---|---|
-| 신혼부부 | 혼인 7년 이내 또는 예비·한부모. **2024~ 자녀 유무·수 가중** | 30% |
-| 다자녀 | **미성년 자녀 2명 이상 (2024.3 완화, 기존 3명)** | 10% |
-| 생애최초 | 평생 무주택·기혼 또는 1인가구 | 20% |
-| 노부모부양 | 65세 이상 직계존속 3년 이상 부양 | 3% |
-| 기관추천 | 국가유공자·장애인·중소기업 등 | 10% |
-| **신생아 특공 (2024.3 신설)** | 2세 이하 자녀 있는 무주택 세대, 연 7만호 공급 | 공공분양 우선 |
+| Newlyweds | Within 7 years of marriage, or prospective/single-parent. **From 2024~, weighted by presence/number of children** | 30% |
+| Multi-child families | **2+ minor children (2024.3 eased, previously 3+)** | 10% |
+| First-time homebuyers | Lifelong non-homeowner, married or single-person household | 20% |
+| Elderly parent support | Supporting lineal ascendants aged 65+ for 3+ years | 3% |
+| Institutional recommendation | National merit holders, disabled persons, SMEs, etc. | 10% |
+| **Newborn Special Supply (신생아 특공, newly established 2024.3)** | Non-homeowner households with children aged 2 or younger, 70,000 units supplied annually | Priority in public sale |
 
-특공 합 ≈ 73~83% (신생아 포함, 지역 따라 상이)
+Total special supply ≈ 73–83% (including newborn, varies by region)
 
-### 가점제·추첨제 비율 개편 (2023.4~)
+### Points System vs. Lottery Ratio Reform (from 2023.4)
 
-- **투기과열지구 60㎡ 이하**: 가점제 40% / **추첨제 60%** (기존 100% 가점 → 추첨 비중 대폭 확대)
-- **투기과열지구 60~85㎡**: 가점 70% / 추첨 30%
-- **85㎡ 초과**: 가점 80% / 추첨 20% (고가점자 위주, 세부 규정 확인 필요)
-- 목적: 젊은 세대·1인 가구의 당첨 기회 확대 (60㎡ 이하 소형 중심)
-- *가점 낮은 고소득 가구에 유리*하게 설계된 측면 — 역설적으로 "부모 찬스" 유입 비판도
+- **Speculative Overheated District, 60㎡ or less**: Points system 40% / **Lottery 60%** (previously 100% points → lottery share dramatically expanded)
+- **Speculative Overheated District, 60–85㎡**: Points 70% / Lottery 30%
+- **Over 85㎡**: Points 80% / Lottery 20% (high-point holders dominant, detailed rules need confirmation)
+- Purpose: Expand winning opportunities for younger generations and single-person households (centered on small 60㎡ or less)
+- *Designed to favor high-income households with low points* — paradoxically, criticism of "parental assistance" influx
 
-## 당첨 확률 함수
+## Winning Probability Function
 
-$$P_\text{당첨} = f(\text{본인 가점}, \text{단지 가점 커트라인}, \text{추첨 경쟁률}, \text{지역 우선})$$
+$$P_\text{winning} = f(\text{applicant points}, \text{complex points cutoff}, \text{lottery competition rate}, \text{regional priority})$$
 
-- **지역 우선**: 해당 지역 거주자·해당 지역 배정 우선 → 수도권 과밀지역은 1년/2년 거주 요건
-- **추첨제**: 가점 낮아도 운 기반. 특히 신혼·생애최초·다자녀는 추첨 비중 높음
+- **Regional priority**: Priority for regional residents and regionally allocated units → 1-year/2-year residency requirement in metropolitan overpopulated areas
+- **Lottery system**: Luck-based even with low points. Especially for newlyweds, first-time homebuyers, and multi-child families, the lottery share is high.
 
-## 언제 쓰나
+## When to Use
 
-- 청약 vs 매매 선택
-- 특공 적합성 판단 (신혼·다자녀·생애최초·노부모부양)
-- 가점 경쟁력 없을 때 추첨제 전략
-- 통장 유지·납입 전략
-- 분양가상한제 단지 당첨 시 실익 계산
+- Subscription (청약) vs. purchase decision
+- Special supply eligibility assessment (newlyweds, multi-child, first-time, elderly parent support)
+- Lottery strategy when points are uncompetitive
+- Account maintenance and deposit strategy
+- Calculating actual gains from winning a price-capped unit
 
-## 한국 시장 적용 포인트
+## Korean Market Application Points
 
-### 1. 가점 인플레이션
+### 1. Points Inflation
 
-- 2020~2022 수도권 당첨 커트라인 60~70점
-- 만점(84점)은 무주택 15년 + 부양가족 6명 + 통장 15년 = 거의 불가능
-- **55점 이하는 수도권 인기 단지 사실상 불가**
-- 지방·비인기 단지는 40~50점대도 가능
+- 2020–2022 metropolitan area cutoff: 60–70 points
+- Perfect score (84 points) = 15 years non-homeownership + 6 dependents + 15 years account = nearly impossible
+- **Below 55 points is effectively impossible for popular metropolitan complexes**
+- Regional and less-popular complexes possible with 40–50 points
 
-### 2. 3자녀 가구는 특수 트랙
+### 2. Households with 3 Children on Special Track
 
-- 다자녀 특공: 자녀 3명 + 소득·자산 요건
-- *일반 가점제*에선 부양가족으로 이미 유리
-- **선택 전략**: 다자녀 특공 쓰고 떨어지면 일반 가점 재신청
+- Multi-child special supply: 3 children + income and asset requirements
+- Already advantaged in *general points system* due to dependents
+- **Selection strategy**: Apply for multi-child special supply first; if rejected, reapply for general points
 
-### 3. 규제 완화 흐름 (2023~)
+### 3. Regulatory Easing Trend (from 2023)
 
-- 추첨제 비율 확대 → 젊은 세대에 기회 확대
-- 생애최초 1인가구 허용
-- 신혼부부 자녀 유무 가중치
-- *단, 시점별 정책 변화 크므로 청약 직전 규정 재확인*
+- Expanded lottery ratio → more opportunities for younger generations
+- First-time homebuyer single-person households allowed
+- Weighting for newlywed couples based on children
+- *However, policy changes are frequent, so regulations must be reconfirmed right before subscription (청약)*
 
-### 4. 분양가상한제 당첨의 가치 (2026.4 기준)
+### 4. Value of Winning a Price-Capped Unit (as of 2026.4)
 
-- 당첨 즉시 시세 대비 20~50% 프리미엄 (지역별)
-- **전매제한**:
-  - 수도권 공공택지 분양가상한제 3~10년
-  - 민간택지 분양가상한제 1~3년 (2023.4 대폭 완화)
-  - 투기과열지구 민간 1년 (단 재당첨 제한은 별도)
-- **실거주 의무**:
-  - 2023.4 정부가 폐지안 발표했으나 국회 계류 → **2024.2 주택법 개정으로 3년 유예** (폐지 아닌 최초 입주 가능일로부터 3년 내 실거주 개시)
-  - 규정 불확실성 지속. 청약 당첨 시 계약서·공고문 원문 확인
-- 단기 매도 불가 → 장기 보유 전략
-- 분양가 · 중도금 자금 계획 필요
+- Upon winning, immediate 20–50% premium over market price (varies by region)
+- **Resale restrictions**:
+  - Metropolitan public land price-capped: 3–10 years
+  - Private land price-capped: 1–3 years (significantly eased 2023.4)
+  - Speculative overheated district private: 1 year (re-winning restrictions separate)
+- **Actual residency obligation**:
+  - Government announced abolition plan in 2023.4 but pending in National Assembly → **Housing Act amendment in 2024.2 granted 3-year grace period** (not abolition; actual residency must begin within 3 years of initial move-in date)
+  - Regulatory uncertainty persists. Upon winning, check original contract and announcement text.
+- Short-term sale not possible → long-term holding strategy
+- Need funding plan for sale price and intermediate payments
 
-### 4-1. 무순위(줍줍)
+### 4-1. Unranked (줍줍)
 
-- 2023.2 완화 → *전국민 신청 가능* (무주택·지역 요건 폐지)
-- 2024~ 실거주 의무 부활 논의로 규정 출렁
-- "줍줍 로또"로 과열 → 분양 단지별 자격 재확인 필수
-- 계약 포기 세대가 무순위로 다시 시장에 → 실거래가 × 20~40% 할인 기회 존재
+- 2023.2 easing → *all citizens can apply* (non-homeownership and regional requirements abolished)
+- Regulations fluctuate with 2024 residency obligation revival debates
+- Overheating as "lottery 줍줍" → must reconfirm eligibility per supply complex
+- Contract-forfeiting households return to market via unranked → opportunities at 20–40% discount to market price
 
-### 5. 청약홈 실전 팁
+### 5. Subscription Home Practical Tips
 
-- 청약 가점 계산기 활용 (본인 스스로)
-- 경쟁률·커트라인 공개 데이터 축적
-- 유사 입지·가격대 단지 비교
-- 실거주 요건·의무거주기간 조건 반드시 확인
+- Use subscription (청약) points calculator (on your own)
+- Accumulate public data on competition rates and cutoffs
+- Compare complexes with similar location and price ranges
+- Must verify actual residency requirement and mandatory residency period conditions
 
-### 6. 함정
+### 6. Pitfalls
 
-- **기존 주택 매각 시점**: 입주 때까지 처분 안 하면 당첨 취소·불법
-- **세대주 요건**: 특정 공급 유형은 세대주만
-- **과거 당첨 이력**: 재당첨 제한 기간
-- **부양가족 오산정**: 주민등록 실거주 요건 미달 시 부적격
+- **Timing of existing home sale**: If not disposed of by move-in, winning is canceled or deemed illegal
+- **Household head requirement**: Certain supply types require household head status
+- **Past winning history**: Re-winning restriction period
+- **Miscalculation of dependents**: Disqualified if household registration actual residency requirements unmet
 
-## 사용 절차
+## Usage Procedure
 
 ```
-1. 가점 계산
-   - 무주택 + 부양가족 + 통장 = X점
-2. 해당 풀 식별
-   - 일반 가점제 경쟁력? (커트라인 vs 본인)
-   - 특공 해당? (신혼/다자녀/생애최초/노부모부양)
-3. 타겟 지역·단지 선정
-   - 본인 거주·생활권
-   - 과거 유사 단지 커트라인
-   - 향후 분양 캘린더 (건설사·지자체 홈페이지)
-4. 자금 계획
-   - 중도금 60%·잔금 30% 스케줄
-   - DSR·잔금대출 가능성
-5. 당첨 시 시나리오
-   - 실거주 의무 이행
-   - 전매제한 기간
-   - 기존 주택 처분 시점
-6. 낙첨 시 대안
-   - 줍줍(무순위) 모니터링
-   - 매매로 전환
-   - 통장 유지
+1. Calculate points
+   - Non-homeownership + dependents + account = X points
+2. Identify applicable pool
+   - Competitive in general points system? (cutoff vs. your points)
+   - Special supply eligible? (newlywed/multi-child/first-time/elderly parent support)
+3. Select target region and complex
+   - Your residence and living area
+   - Cutoffs of similar past complexes
+   - Upcoming supply calendar (builder, local government websites)
+4. Funding plan
+   - Intermediate payment 60% / final payment 30% schedule
+   - DSR and final payment loan feasibility
+5. Winning scenarios
+   - Fulfill actual residency obligation
+   - Resale restriction period
+   - Timing of existing home disposal
+6. Rejection alternatives
+   - Monitor 줍줍 (unranked)
+   - Switch to purchase
+   - Maintain account
 ```
 
-## 한국 맥락 예시
+## Korean Context Examples
 
-**질문**: "울산 거주, 자녀 3명, 무주택 10년, 통장 15년 — 수도권 청약 가능성?"
+**Question**: "Resident of Ulsan, 3 children, non-homeowner for 10 years, account for 15 years — possibility of metropolitan subscription (청약)?"
 
-**가점 계산**:
-- 무주택 10년: 22점
-- 부양가족 4명(배우자+자녀3): 25점
-- 통장 15년: 17점
-- **합: 64점**
+**Points Calculation**:
+- Non-homeownership 10 years: 22 points
+- 4 dependents (spouse + 3 children): 25 points
+- Account 15 years: 17 points
+- **Total: 64 points**
 
-**전략 분석**:
-- 수도권 일반 가점제 커트라인: 55~70점 (단지별)
-- 64점은 수도권 중위권 단지 가능, 인기 단지(강남권) 불가
-- **지역 우선** 미충족 (수도권 거주자 우선) → 수도권 1순위 거주자에 밀림
-- 대안 1: 다자녀 특공 (소득·자산 요건 충족 시) — 추첨
-- 대안 2: 지방 (울산·광주·대구) 단지 가점제 → 거의 확실
-- 대안 3: 울산 상급지 매매로 전환 (갈아타기)
+**Strategic Analysis**:
+- Metropolitan general points system cutoff: 55–70 points (varies by complex)
+- 64 points possible for mid-tier metropolitan complexes, impossible for popular complexes (Gangnam area)
+- **Regional priority** unmet (metropolitan residents prioritized) → outranked by metropolitan 1st-tier residents
+- Alternative 1: Multi-child special supply (if income/asset requirements met) — lottery
+- Alternative 2: Regional (Ulsan, Gwangju, Daegu) complex points system → virtually certain
+- Alternative 3: Switch to purchase in Ulsan premium area (trading up)
 
-**권장**: 수도권은 기회 탐색만, 주력은 *울산 상급지 매매* + *다자녀 특공 병행*.
+**Recommendation**: Explore metropolitan only as opportunity; main focus on *Ulsan premium area purchase* + *parallel multi-child special supply*.
 
-**질문**: "무주택 2년, 자녀 없음, 통장 3년 — 청약 해야 하나?"
+**Question**: "Non-homeowner for 2 years, no children, account for 3 years — should I apply?"
 
-**분석**:
-- 가점: 4 + 5 + 5 = **14점** → 가점제 무의미
-- **추첨제** 집중 전략 필요
-- 비규제지역 추첨 60~75%, 투기과열 60% → 추첨 풀 좋음
-- 생애최초 특공(20%)·신혼부부 특공(30%) 활용
-- **통장 유지 + 가족 확장 계획에 따라 장기 전략**
+**Analysis**:
+- Points: 4 + 5 + 5 = **14 points** → points system meaningless
+- **Lottery-focused** strategy needed
+- Non-regulated area lottery 60–75%, speculative overheated 60% → good lottery pool
+- Utilize first-time homebuyer special supply (20%) and newlywed special supply (30%)
+- **Long-term strategy based on account maintenance + family expansion plans**
 
-## 한계
+## Limitations
 
-1. **정책 변화 빈번** — 가점·추첨 비율, 특공 범위, 지역 우선 규정이 자주 바뀜.
-2. **단기 운 요소** — 추첨은 확률. 계획 수립 어려움.
-3. **자금력 미반영** — 가점 높아도 중도금·잔금 못 내면 포기.
-4. **분양가 리스크** — 고분양 시 당첨 프리미엄 얇음·실거주 부담.
-5. **경쟁 환경 편차 큼** — 서울 vs 지방 완전 다른 게임.
-6. **정보 게임** — 건설사·분양 일정은 정보 접근성이 결과 좌우.
+1. **Frequent policy changes** — Points and lottery ratios, special supply scope, and regional priority regulations change often.
+2. **Short-term luck factor** — Lottery is probabilistic. Difficult to make plans.
+3. **Financial capacity not reflected** — Even with high points, must forfeit if unable to pay intermediate and final payments.
+4. **Sale price risk** — With high sale prices, winning premium is thin and actual residency burden heavy.
+5. **Large competitive environment variance** — Seoul vs. regional areas are entirely different games.
+6. **Information game** — Builder and supply schedules are determined by information accessibility.
 
-## 이 프레임워크가 *틀렸을 때*
+## When This Framework *Is Wrong*
 
-- 매매 타이밍 비교 → `harrison-cycle`, `dipasquale-wheaton`
-- 분양권 vs 기존 매매 가치 비교 → `hedonic-pricing`
-- 재건축·재개발 조합원 자격 → `redevelopment-feasibility`
+- Comparing purchase timing → `harrison-cycle`, `dipasquale-wheaton`
+- Comparing subscription rights vs. existing purchase value → `hedonic-pricing`
+- Redevelopment/reconstruction association member eligibility → `redevelopment-feasibility`
 
-## 추가 학습 자료
+## Additional Learning Resources
 
-- 한국부동산원 청약홈 (applyhome.co.kr) — 공식 자료·가점 계산기.
-- 주택공급에 관한 규칙 — 원문 확인.
-- 국토교통부 주택도시정책 자료.
-- **경고**: 유튜브·블로그의 "청약 꿀팁" 상당수가 구제도 기준. 2024 이후 개정 사항은 반드시 청약홈 원문 확인.
+- Korea Real Estate Board Subscription Home (applyhome.co.kr) — Official materials and points calculator.
+- Rules on Housing Supply — Check original text.
+- Ministry of Land, Infrastructure and Transport housing/urban policy materials.
+- **Warning**: Many "subscription (청약) tips" on YouTube and blogs are based on old regulations. Amendments after 2024 must be verified against original text on Subscription Home.

@@ -1,137 +1,137 @@
 ---
 name: hedonic-pricing
 version: "0.1.0"
-description: "Hedonic Pricing Model — 부동산 가격을 속성(학군/역세권/층/평형/뷰/브랜드/연식 등)별 암묵 가격으로 분해. Rosen 1974. 학군 프리미엄 얼마인지, 역세권 가산은 몇 %인지 정량화할 때 쓴다."
+description: "Hedonic Pricing Model — decompose real estate prices into implicit prices by attribute (school district / proximity to subway / floor / size / view / brand / age, etc.). Rosen 1974. Use this when quantifying how much the school district premium is, or what percentage premium the subway-proximity adds."
 ---
 
 # Hedonic Pricing Model
 
-## 한 줄 요약
+## One-Line Summary
 
-부동산 가격은 **속성들의 묶음 가격**이다. 전체 가격을 속성별로 쪼개면 각 속성의 "암묵 가격(implicit price)"이 나온다.
+A real estate price is a **bundled price of attributes**. Decomposing the total price by attribute reveals each attribute's "implicit price."
 
-## 이론 기원
+## Theoretical Origins
 
-- **Rosen (1974)** — "Hedonic Prices and Implicit Markets". 이질적 재화(heterogeneous goods)의 시장에서 속성별 수요·공급 이론.
-- **Court (1939)** — 자동차 가격 지수 만들며 처음 사용.
-- 부동산 학계에서 가장 널리 쓰이는 실증 도구. Case-Shiller 지수의 이론적 배경 중 하나.
+- **Rosen (1974)** — "Hedonic Prices and Implicit Markets." A theory of attribute-level supply and demand in markets for heterogeneous goods.
+- **Court (1939)** — First used while constructing an automobile price index.
+- The most widely used empirical tool in real estate academia. One of the theoretical foundations behind the Case-Shiller index.
 
-### Rosen의 2단계 추정 구조
+### Rosen's Two-Stage Estimation Structure
 
-- **1단계**: 시장 균형 hedonic price function $P(x)$ 추정 — *속성의 암묵 가격* 발견
-- **2단계**: 암묵 가격 $\partial P / \partial x_i$를 소득·선호 변수에 회귀 → *속성의 수요함수* 추정
-- **문제**: 2단계의 *identification 이슈* (Brown-Rosen 1982, Epple 1987) — 단일 시장 자료로는 수요·공급 분리 어려움. 실무 hedonic 분석은 **대부분 1단계에서 멈춘다**.
-- 실증 적용은 "암묵 가격 추정"까지만 유효하게 취급하는 것이 주류
+- **Stage 1**: Estimate the market-equilibrium hedonic price function $P(x)$ — *discover the implicit price of each attribute*
+- **Stage 2**: Regress the implicit price $\partial P / \partial x_i$ on income and preference variables → estimate the *demand function for the attribute*
+- **Problem**: Stage 2 has *identification issues* (Brown-Rosen 1982, Epple 1987) — separating supply and demand from single-market data is difficult. In practice, hedonic analysis **mostly stops at Stage 1**.
+- The mainstream empirical convention is to treat only the "implicit price estimation" as validly applicable
 
-## 핵심 개념
+## Core Concepts
 
-### 1. 가격 = 속성 벡터의 함수
+### 1. Price = Function of an Attribute Vector
 $$P = f(x_1, x_2, ..., x_n)$$
-- $x_i$: 속성 (면적, 층, 역까지 거리, 학군 등급, 연식, 브랜드...)
-- 부분 미분 $\partial P / \partial x_i$ = 속성 $i$의 암묵 가격
+- $x_i$: attribute (area, floor, distance to subway, school district grade, age, brand...)
+- The partial derivative $\partial P / \partial x_i$ = the implicit price of attribute $i$
 
-### 2. 회귀 분석으로 추정
-$$\ln(P) = \alpha + \beta_1 \cdot \text{면적} + \beta_2 \cdot \text{역거리} + \beta_3 \cdot \text{학군더미} + \epsilon$$
-- 로그 선형 형태 흔히 사용 → 계수가 % 변화로 해석됨
+### 2. Estimation via Regression
+$$\ln(P) = \alpha + \beta_1 \cdot \text{area} + \beta_2 \cdot \text{distance to subway} + \beta_3 \cdot \text{school district dummy} + \epsilon$$
+- The log-linear form is commonly used → coefficients are interpreted as percentage changes
 
-### 3. 두 종류 속성
-- **구조적(structural)**: 면적, 층, 평형, 연식, 브랜드
-- **입지적(locational)**: 역세권, 학군, 조망, 소음, 상권
-- **이웃(neighborhood)**: 범죄율, 공원, 병원 접근성
+### 3. Two Types of Attributes
+- **Structural**: area, floor, size, age, brand
+- **Locational**: subway access, school district, view, noise, commercial area
+- **Neighborhood**: crime rate, parks, hospital access
 
-## 언제 쓰나
+## When to Use
 
-- "학군 프리미엄이 얼마나 붙나?" — A동 vs B동 같은 단지, 학군만 다를 때 시세 차이
-- "역세권 가산이 타당한가?" — 500m 거리 변화가 가격에 얼마 영향
-- "리모델링·조망 개선의 가치는?" — 속성 변화 시 기대 가격 증가분
-- "해당 매물이 싸다/비싸다 판단" — 예측 가격 vs 호가 비교
-- "감정평가 타당성 검증" — 공시가격·감정가의 구조 이해
+- "How much premium does the school district add?" — price difference between Building A vs Building B in the same complex when only the school district differs
+- "Is the subway-proximity premium justified?" — how much a 500m distance change affects price
+- "What's the value of remodeling or improving the view?" — expected price increase when an attribute changes
+- "Judging whether a listing is cheap or expensive" — predicted price vs asking price comparison
+- "Validating an appraisal" — understanding the structure of the public assessed price and appraised value
 
-## 한국 시장 적용 포인트
+## Application Points for the Korean Market
 
-### 1. 한국에서 가장 강한 속성들 (경험적 계수 가이드, 유사 단지 비교 기준)
+### 1. Attributes with the Strongest Effects in Korea (Empirical Coefficient Guide, Based on Comparison of Similar Complexes)
 
-| 속성 | 추정 프리미엄 | 출처·주의 |
+| Attribute | Estimated Premium | Source/Caveat |
 |---|---|---|
-| 학군 1등급 (대치·목동·중계) | **+10~25%** | 국책연구·KDI 서울 학군 논문 범위. 단지 내 배정 상이 시 호수별 격차 수천만~1억 |
-| 초역세권 (200m 이내) | **+5~15%** | 500m·1km 경계에서 단층, 환승역은 추가 |
-| 한강뷰 (직접) | **+15~30%** | 동일 단지 내 뷰vs비뷰 비교 (실거래가 기준) |
-| 브랜드 (1군 vs 2군) | **+5~15%** | 래미안·푸르지오·자이·힐스테이트 vs 중견 |
-| 대단지 (1,000세대+) | **+3~8%** | 관리비 절감·유동성 프리미엄 |
-| 로얄층 (전체 층수의 50~80%) | 저층 대비 **+3~10%** | 동일 평형 내 |
-| 판상형 vs 타워형 | 판상형 **+3~7%** (수도권 가족 단위) | 평면 선호 |
-| 남향 vs 북/동향 | 남향 **+2~5%** | 일조·건조·난방비 |
-| 초품아 (단지 내 초등학교) | **+5~10%** | 가족 단위 수요 |
+| Top-tier school district (Daechi / Mok-dong / Junggye) | **+10~25%** | Range from KDI Seoul school district papers and government research. When in-complex zoning differs, gaps can reach tens of millions to 100M KRW per unit |
+| Hyper-subway access (within 200m) | **+5~15%** | Step changes at 500m and 1km thresholds; transfer stations add more |
+| Direct Han River view | **+15~30%** | Comparison of view vs no-view units within the same complex (based on actual transaction prices) |
+| Brand (top-tier vs second-tier) | **+5~15%** | Raemian / Prugio / Xi / Hillstate vs mid-tier developers |
+| Large complex (1,000+ units) | **+3~8%** | Lower management fees, liquidity premium |
+| Royal floor (50~80% of total floors) | **+3~10%** vs low floors | Within the same size |
+| Pansang (slab) vs Tower type | Pansang **+3~7%** (family units in metropolitan area) | Floor plan preference |
+| South-facing vs N/E-facing | South-facing **+2~5%** | Sunlight, dryness, heating costs |
+| Cho-poom-a (elementary school inside complex) | **+5~10%** | Family-unit demand |
 
-**경고**: 위 범위는 *경험적 구간*이며 단지별로 완전히 달라짐. 회귀분석 대체 아님.
+**Warning**: The above ranges are *empirical intervals* and vary completely by complex. Not a substitute for regression analysis.
 
-### 2. 한국 특수 속성
-- **재건축 기대** — 연식이 *오래될수록* 가격이 올라가는 역전 (서울 강남 구축)
-- **분양가상한제** — 신축 청약 당첨 = 즉시 수억 프리미엄 (시장 가격과 괴리)
-- **학군 배정 변경 리스크** — 최근 강남/목동 배정 조정
-- **용적률 여유** — 재건축 가능성 암묵 반영
+### 2. Korea-Specific Attributes
+- **Reconstruction expectations** — A reversal where prices *rise as the building gets older* (older complexes in Gangnam, Seoul)
+- **Price ceiling on new sales (분양가상한제)** — winning a new-construction subscription (청약) = immediate premium of hundreds of millions of KRW (decoupled from market price)
+- **School zoning change risk** — recent zoning adjustments in Gangnam / Mok-dong
+- **Floor area ratio headroom** — implicitly reflects reconstruction potential
 
-### 3. 추정 시 주의
-- **표본 편향**: 거래 신고가 vs 호가 vs 실거래. KB시세·국토부 실거래가 병행.
-- **시계열 변화**: 학군 프리미엄은 저출산으로 장기 감소 중이라는 가설.
-- **정책 충격**: 취득세·양도세 변동이 계수를 흔듦.
+### 3. Caveats When Estimating
+- **Sample bias**: reported transaction price vs asking price vs actual transaction. Use both KB market price and Ministry of Land actual transaction data in parallel.
+- **Time-series shifts**: There's a hypothesis that the school district premium is in long-term decline due to low birth rates.
+- **Policy shocks**: changes in acquisition tax / capital gains tax shake the coefficients.
 
-### 4. 한국 감정평가 실무와의 접점
+### 4. Interfaces with Korean Appraisal Practice
 
-- **공시지가·공시가격**: 한국부동산원·감정평가사가 산정. *유사 거래 사례 비교법*이 hedonic의 실무 변형.
-- **거래사례비교법** (주거용 주된 방법): 유사 비교표준 선택 → 속성별 보정 → 최종 감정가. Hedonic 1단계 축약판.
-- **개별요인 보정률**: 감정평가 실무기준에 층·향·위치·규모별 보정률 표 제시 (±3~15%). Hedonic 암묵 가격의 주관적 버전.
-- **공시가격의 실거래 반영율**: 2026.4 현재 **65~70% 목표** (정부 현실화율 로드맵 수정 이후). 전년 대비 소폭 상승.
-- 함의: 담보·세무·보상 용도 감정가는 실거래 대비 *보수적* → 매수 타당성 분석엔 실거래가 기반 hedonic이 우선
+- **Public land price / public assessed price (공시지가·공시가격)**: Calculated by the Korea Real Estate Board and certified appraisers. The *comparable sales method* is the practical variant of hedonic analysis.
+- **Comparable sales method** (the dominant method for residential properties): select benchmark comparables → adjust by attribute → derive final appraised value. A condensed version of hedonic Stage 1.
+- **Individual factor adjustment rates**: Korean appraisal practice standards present adjustment rate tables by floor / orientation / location / size (±3~15%). A subjective version of hedonic implicit prices.
+- **Public-assessed-price reflection ratio of actual transactions**: As of 2026.4, the **target is 65~70%** (after the revision of the government's realization rate roadmap). Slightly increased year-over-year.
+- Implication: Appraised values for collateral, taxation, and compensation purposes are *conservative* relative to actual transactions → hedonic analysis based on actual transaction prices takes precedence for purchase feasibility analysis
 
-## 사용 절차
+## Procedure for Use
 
 ```
-1. 비교 대상 설정 (비슷한 단지 5~20개)
-2. 속성 리스트업: 면적, 층, 향, 역거리, 학군, 연식, 브랜드, 세대수, 용적률
-3. 실거래가 수집 (국토부 공개 API, KB, 호갱노노, 아실)
-4. 속성별 가격 차이 계산:
-   - 동일 조건 가정 시, A 속성만 다른 두 단지의 가격 차 = A의 프리미엄
-5. 대상 매물의 속성 벡터 → 예측 가격 산출
-6. 예측 가격 vs 호가 비교 → 매수/매도 판단 보조
+1. Set comparison targets (5~20 similar complexes)
+2. List attributes: area, floor, orientation, distance to subway, school district, age, brand, number of units, floor area ratio
+3. Collect actual transaction prices (Ministry of Land public API, KB, Hogangnono, Asil)
+4. Calculate price differences by attribute:
+   - Assuming identical conditions, the price difference between two complexes that differ only in attribute A = the premium of A
+5. Map the target listing's attribute vector → derive a predicted price
+6. Compare predicted price vs asking price → use as an aid for buy/sell judgment
 ```
 
-## 한국 맥락 예시
+## Korean-Context Example
 
-**질문**: "래미안 A 85㎡ 13억 vs 자이 B 85㎡ 12.5억, 같은 동네인데 뭘 살까?"
+**Question**: "Raemian A 85㎡ at 1.3B KRW vs Xi B 85㎡ at 1.25B KRW — same neighborhood; which should I buy?"
 
-**Hedonic 분해 시도**:
+**Hedonic Decomposition Attempt**:
 
-| 속성 | 래미안 A | 자이 B | 격차 영향 |
+| Attribute | Raemian A | Xi B | Gap Impact |
 |---|---|---|---|
-| 연식 | 5년 | 12년 | +1~1.5억 (신축 프리미엄) |
-| 세대수 | 2000세대 | 800세대 | +3~5천 (대단지) |
-| 역 거리 | 350m | 800m | +5천~1억 (초역세권) |
-| 학군 | 동일 | 동일 | 0 |
-| 브랜드 | 래미안 | 자이 | 무차이 (상급) |
-| 로얄층 여부 | 로얄층 | 저층 | +5천~1억 |
+| Age | 5 years | 12 years | +100~150M (new-build premium) |
+| Number of units | 2,000 units | 800 units | +30~50M (large complex) |
+| Distance to subway | 350m | 800m | +50~100M (hyper-subway access) |
+| School district | Identical | Identical | 0 |
+| Brand | Raemian | Xi | No difference (both top-tier) |
+| Royal floor status | Royal floor | Low floor | +50~100M |
 
-→ 예상 정당 격차: 1.5~2.5억. 실제 격차 5천만. **자이 B가 상대적으로 저평가** 가능성 (또는 래미안 A가 덜 올라온 매물).
+→ Expected justified gap: 150~250M KRW. Actual gap: 50M KRW. **Xi B is potentially relatively undervalued** (or Raemian A hasn't risen as much as it should have).
 
-추가 확인: 자이 B에 향후 재건축/리모델링 이슈 있는지, 관리 상태, 매도 사유.
+Additional checks: whether Xi B has any future reconstruction / remodeling issues, management condition, reason for sale.
 
-## 한계
+## Limitations
 
-1. **누락 변수 편향** — 관측 불가 속성(층간소음, 커뮤니티 분위기, 특정 세대 유입)은 계수에 뭉쳐들어감
-2. **내생성** — 학군이 좋아서 비싼 건가, 비싸서 좋은 학군이 모이는 건가 (양방향)
-3. **시장 분할** — 강남/강북, 수도권/지방은 다른 시장. 한 모델로 통합하면 오류.
-4. **단기 충격에 취약** — 정책·금리·심리 변화 시 계수 급변
-5. **소수 거래 종목**: 거래가 적은 단지는 암묵 가격 추정 자체가 불안정
+1. **Omitted variable bias** — unobservable attributes (inter-floor noise, community atmosphere, specific generational influx) get bundled into the coefficients
+2. **Endogeneity** — Is it expensive because the school district is good, or does a good school district cluster because it's expensive? (bidirectional)
+3. **Market segmentation** — Gangnam / Gangbuk and metropolitan area / regional are different markets. Combining them into one model causes errors.
+4. **Vulnerable to short-term shocks** — coefficients shift drastically with policy / interest rate / sentiment changes
+5. **Low-transaction items**: For complexes with few transactions, even the implicit price estimation itself is unstable
 
-## 이 프레임워크가 *틀렸을 때*
+## When This Framework Is *Wrong*
 
-- 레버리지 구조(갭투자) 문제 → `gap-investment`
-- 공급 물량 이슈 → `dipasquale-wheaton`
-- 수익형 부동산 평가 → `cap-rate-dcf`
-- 사이클 위치 질문 → `harrison-cycle`
+- Leverage structure (gap investment) issues → `gap-investment`
+- Supply-volume issues → `dipasquale-wheaton`
+- Income-property valuation → `cap-rate-dcf`
+- Cycle-position questions → `harrison-cycle`
 
-## 추가 학습 자료
+## Further Reading
 
 - Rosen, S. (1974). "Hedonic Prices and Implicit Markets." *Journal of Political Economy*.
 - Malpezzi, S. (2003). "Hedonic Pricing Models: A Selective and Applied Review."
-- 한국 실증: 주택산업연구원·KDI 주택 관련 리포트
+- Korean empirical work: housing-related reports from the Korea Housing Industry Research Institute and KDI

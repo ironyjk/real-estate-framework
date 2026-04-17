@@ -1,208 +1,208 @@
 ---
 name: highest-best-use
 version: "0.1.0"
-description: "Highest & Best Use (최유효이용) — 법적 허용성·물리적 가능성·경제적 타당성·최대 수익성 4기준으로 토지·건물의 최적 용도 판단. 재건축 vs 리모델링, 주거용 vs 상가 전환, 재개발 사업성 1차 스크리닝."
+description: "Highest & Best Use (최유효이용) — determine the optimal use of land and buildings using four criteria: legal permissibility, physical possibility, financial feasibility, and maximum productivity. Reconstruction vs. remodeling, residential vs. commercial conversion, first-pass screening for redevelopment feasibility."
 ---
 
 # Highest and Best Use (최유효이용)
 
-## 한 줄 요약
+## One-Line Summary
 
-해당 부동산이 만들 수 있는 *가장 높은 가치*의 용도는 무엇인가? 4가지 필터를 순차 적용해 결정.
+What is the *highest-value* use this property can support? Apply four filters sequentially to decide.
 
-## 이론 기원
+## Theoretical Origin
 
-- 미국 **Appraisal Institute** 감정평가 표준.
-- 한국 **감정평가법 시행령**도 *최유효이용* 개념 명시.
-- 20세기 초 도시계획·감정평가 이론에서 발전.
-- "Highest" = 경제적 가치 최대, "Best" = 법적·물리적 가능 중 최선.
+- U.S. **Appraisal Institute** appraisal standard.
+- Korea's **Enforcement Decree of the Appraisal and Certified Appraisers Act** also explicitly states the *highest and best use* concept.
+- Developed from early 20th-century urban planning and appraisal theory.
+- "Highest" = maximum economic value; "Best" = the best option among the legally and physically possible.
 
-## 4가지 기준 (순차 적용)
+## The Four Criteria (Applied Sequentially)
 
-### 1. 법적 허용성 (Legally Permissible)
-- 용도지역·지구 제한
-- 용적률·건폐율
-- 조례·특례
-- 역사·환경 규제
-- 최근 규제 변화 반영
+### 1. Legally Permissible
+- Zoning and district restrictions
+- Floor area ratio (FAR) and building coverage ratio
+- Ordinances and special exceptions
+- Historic and environmental regulations
+- Reflection of recent regulatory changes
 
-### 2. 물리적 가능성 (Physically Possible)
-- 대지 면적·형상
-- 지질·지반
-- 주변 기반시설 (도로·하수·전기)
-- 접면도로 조건
-- 경사·향
+### 2. Physically Possible
+- Lot area and shape
+- Geology and soil conditions
+- Surrounding infrastructure (roads, sewage, electricity)
+- Frontage road conditions
+- Slope and orientation
 
-### 3. 경제적 타당성 (Financially Feasible)
-- 개발 비용 vs 완공 후 가치
-- 공실·임대 수요
-- 자금조달 가능성
-- 목표 수익률 충족 여부
+### 3. Financially Feasible
+- Development cost vs. completed value
+- Vacancy and rental demand
+- Financing availability
+- Whether the target yield is met
 
-### 4. 최대 수익성 (Maximally Productive)
-- 여러 "가능한" 용도 중 *가장 높은 NPV* 또는 *토지 가치* 산출하는 용도
-- 현재 용도 vs 대안 용도 비교
-- 개발 후 exit 시점 가격 포함
+### 4. Maximally Productive
+- Among multiple "possible" uses, the one yielding the *highest NPV* or *land value*
+- Comparison of current use vs. alternative uses
+- Includes the exit price at the time of post-development sale
 
-## 두 가지 관점
+## Two Perspectives
 
-### As Vacant (공지 가정)
-"이 토지가 비어 있다면 무엇을 지을 것인가?" — 순수 토지 가치 측정.
+### As Vacant
+"If this land were empty, what would be built on it?" — measures pure land value.
 
-### As Improved (현 건물 포함)
-"현재 건물을 유지/리모델링/철거 중 무엇이 최적인가?" — 기존 자산의 효율 판단.
+### As Improved
+"Among keeping, remodeling, or demolishing the current building, which is optimal?" — judges the efficiency of the existing asset.
 
-*차이가 크면 재건축·재개발 신호*.
+*A large gap between the two signals reconstruction or redevelopment.*
 
-## 언제 쓰나
+## When to Use
 
-- 재건축 vs 리모델링 vs 현상 유지 결정
-- 저평가 토지·빌딩 발굴 (현 용도 < 최유효이용)
-- 상가·주택 용도 전환 판단
-- 꼬마빌딩 수익성 개선 기획
-- 재개발 가능성 1차 스크리닝
-- 상속 부동산 활용 방안
+- Deciding between reconstruction, remodeling, or status quo
+- Uncovering undervalued land and buildings (current use < highest and best use)
+- Judging commercial–residential use conversion
+- Planning profitability improvements for small buildings (꼬마빌딩)
+- First-pass screening for redevelopment potential
+- Utilization plans for inherited real estate
 
-## 한국 시장 적용 포인트
+## Points for Applying in the Korean Market
 
-### 1. 법적 필터 — 한국 특수
+### 1. Legal Filter — Korea-Specific
 
-| 항목 | 확인 요소 |
+| Item | Factors to Check |
 |---|---|
-| 용도지역 | 1·2·3종 일반주거, 준주거, 일반·중심상업, 준공업 등 |
-| 용적률 | 지역별 상한 (서울 일반주거 3종 250%, 준주거 500% 등) |
-| 건폐율 | 주거 50~60%, 상업 60~80% |
-| 특례지구 | 준주거 상향, 역세권 특례, 공공기여 연계 |
-| 층수제한 | 경관지구, 고도제한, 문화재 보호 |
-| 건축선 후퇴 | 도로 폭 기준 |
-| 지구단위계획 | 세부 규제 추가 |
+| Zoning | Class 1, 2, 3 general residential; semi-residential; general/central commercial; semi-industrial, etc. |
+| FAR | Regional caps (Seoul Class 3 general residential 250%, semi-residential 500%, etc.) |
+| Building coverage | Residential 50–60%, commercial 60–80% |
+| Special districts | Semi-residential upzoning, station-area exceptions, linked to public contribution |
+| Height limits | Scenic districts, height restrictions, cultural heritage protection |
+| Building-line setback | Based on road width |
+| District unit plan (지구단위계획) | Additional detailed regulations |
 
-### 2. 재건축·재개발 가능성
+### 2. Reconstruction / Redevelopment Feasibility
 
-- **재건축 가능 지표**: 연식 30년 이상, 안전진단 D·E, 용적률 여유
-- **재개발 가능 지표**: 노후도 2/3 이상, 호수밀도, 기반시설 부족
-- 최유효이용 기준으론 *개발 후 가치 - 개발 비용 > 현재 가치*면 개발 타당
+- **Indicators for reconstruction feasibility**: 30+ years since completion, safety diagnosis D or E, headroom in FAR
+- **Indicators for redevelopment feasibility**: 2/3+ deterioration ratio, dwelling density, insufficient infrastructure
+- Under the highest and best use criterion, if *post-development value − development cost > current value*, development is justified
 
-### 3. 준주거·상업지 활용
+### 3. Utilizing Semi-Residential and Commercial Zones
 
-- 1종 → 3종 종상향·준주거 상향은 *가치 급증*
-- 역세권 특례 용적률 (최대 700%까지)
-- 상업지역은 주상복합·오피스텔·호텔 선택지
+- Upzoning from Class 1 → Class 3 or to semi-residential brings a *sharp rise in value*
+- Station-area special FAR (up to 700%)
+- Commercial zones allow options such as mixed-use residential, officetels, and hotels
 
-### 4. 리모델링 vs 재건축 비교
+### 4. Remodeling vs. Reconstruction Comparison
 
-| 기준 | 리모델링 | 재건축 |
+| Criterion | Remodeling | Reconstruction |
 |---|---|---|
-| 사업기간 | 5~8년 | 10~15년 |
-| 용적률 증가 | 30~40% (수평/수직 증축) | 기존 대비 대폭 (종상향 시) |
-| 분담금 | 낮음 | 높음 |
-| 분양수익 | 적음 | 큼 |
-| 안전진단 | B 이상 가능 | D 이하 필요 |
-| 규제 | 비교적 완화 | 엄격 |
+| Project duration | 5–8 years | 10–15 years |
+| FAR increase | 30–40% (horizontal/vertical extension) | Significantly larger than existing (with upzoning) |
+| Contribution (분담금) | Low | High |
+| Sales revenue | Small | Large |
+| Safety diagnosis | Possible at grade B or higher | Requires grade D or lower |
+| Regulation | Relatively relaxed | Strict |
 
-최유효이용 관점: 대지가 크고 용적률 여유 많으면 → **재건축**. 작고 규제 빡빡하면 → **리모델링**.
+From the highest and best use perspective: large lot with ample FAR headroom → **reconstruction**. Small lot with tight regulation → **remodeling**.
 
-### 5. 한국 감정평가 실무
+### 5. Korean Appraisal Practice
 
-- 표준지 공시지가의 최유효이용 판단이 평가의 기초
-- 감정평가서에 "최유효이용" 명시 섹션 존재 (감정평가 실무기준 §610)
-- 담보평가·보상평가에서 핵심 개념
-- **실무 적용 방법**:
-  - 3대 방식 중 *개발법(Development Approach)* = as vacant 계산의 실무 버전
-  - 잔여법(Land Residual): 건물가치 차감 후 토지가치 산출 — 꼬마빌딩 매입·재건축 분석에 사용
-  - 수익환원법 병용 시 수익 용도 최유효이용 확정
-- **보상평가에서의 함정**: 수용·보상 시 "최유효이용 가정 평가" vs "현실 이용 평가" 간 소송 빈번. 공공수용은 대체로 현실 이용 + 일부 개발이익 제한 반영.
+- Judging the highest and best use of benchmark land (표준지) official prices is the foundation of appraisal
+- Appraisal reports contain an explicit "Highest and Best Use" section (Appraisal Practice Standards §610)
+- A core concept in collateral appraisal and compensation appraisal
+- **How to apply in practice**:
+  - Among the three methods, the *Development Approach (개발법)* = the practical version of the as-vacant calculation
+  - Land Residual (잔여법): subtracts the building value to derive the land value — used in small-building acquisition and reconstruction analysis
+  - When combined with the income capitalization approach, the highest and best use for income-producing purposes is confirmed
+- **Pitfalls in compensation appraisal**: in expropriation/compensation, litigation is frequent between "valuation assuming highest and best use" vs. "valuation based on actual current use." Public expropriation generally reflects actual use plus limited recognition of development gains.
 
-### 6. 2026.4 공사비 기준 as vacant 재계산 가이드
+### 6. As-Vacant Recalculation Guide Based on April 2026 Construction Cost Benchmarks
 
-개발 후 가치에서 차감할 공사비 레퍼런스:
+Construction cost references to deduct from post-development value:
 
-| 유형 | 평당 공사비 (브랜드 기준) | 비고 |
+| Type | Per-pyeong Construction Cost (Brand Basis) | Notes |
 |---|---|---|
-| 아파트 (중고밀, 20층 이하) | 700~850만원 | 일반 브랜드 |
-| 아파트 (고밀·고층 30층+) | 850~1,050만원 | 고층 할증 |
-| 하이엔드 (디에이치·아크로·써밋) | 1,000~1,200만원 | 강남·한남·반포 |
-| 주상복합·오피스텔 | 950~1,150만원 | 설비 복잡 |
-| 상가·근린생활 | 500~700만원 | 내장 단순 |
-| 꼬마빌딩 신축 (4~7층) | 600~900만원 | 중소규모 할증 |
+| Apartment (mid-rise, up to 20 stories) | 7.0–8.5M KRW | General brands |
+| Apartment (high-density, 30+ stories) | 8.5–10.5M KRW | High-rise premium |
+| High-end (The H, Acro, Summit) | 10.0–12.0M KRW | Gangnam, Hannam, Banpo |
+| Mixed-use residential / officetel | 9.5–11.5M KRW | Complex MEP |
+| Commercial / neighborhood living facilities | 5.0–7.0M KRW | Simple interior |
+| New small building (4–7 stories) | 6.0–9.0M KRW | Small-scale premium |
 
-*사업비(설계·감리·금융·운영)는 공사비의 15~25% 추가 가정.*
-*자재·인건비 변동 심한 시기엔 ±15% 민감도.*
+*Assume project costs (design, supervision, financing, operations) add 15–25% on top of construction cost.*
+*In periods with heavy material/labor cost volatility, apply ±15% sensitivity.*
 
-## 사용 절차
+## Procedure
 
 ```
-1. As Vacant 분석
-   - 용도지역·규제 확인
-   - 지을 수 있는 건축 옵션 리스트업 (주거/상업/오피스/혼합)
-   - 각 옵션의 예상 NOI 또는 매각가
-   - 최대 가치 옵션 = 최유효이용 (as vacant)
+1. As-Vacant Analysis
+   - Check zoning and regulations
+   - List buildable architectural options (residential / commercial / office / mixed)
+   - Estimated NOI or sale value for each option
+   - The max-value option = Highest and Best Use (as vacant)
 
-2. As Improved 분석
-   - 현재 건물의 잔존 가치·NOI
-   - 리모델링 시나리오 (비용 vs 가치 증가)
-   - 재건축 시나리오 (철거+신축 비용 vs 신축 후 가치)
+2. As-Improved Analysis
+   - Residual value and NOI of the current building
+   - Remodeling scenario (cost vs. value increase)
+   - Reconstruction scenario (demolition + new construction cost vs. post-construction value)
 
-3. 비교
-   - As Vacant 가치 > As Improved → 철거·재건축 유리
-   - As Vacant 가치 ≈ As Improved → 리모델링 고려
-   - As Vacant 가치 < As Improved → 현 상태 유지
+3. Comparison
+   - As-Vacant value > As-Improved → demolition/reconstruction is advantageous
+   - As-Vacant value ≈ As-Improved → consider remodeling
+   - As-Vacant value < As-Improved → maintain current state
 
-4. 법적·정치적 실현 가능성
-   - 재건축 조합 동의율, 인허가 난이도
-   - 규제 변화 리스크
+4. Legal and Political Feasibility
+   - Consent rate of the reconstruction association, difficulty of permits
+   - Regulatory change risk
 ```
 
-## 한국 맥락 예시
+## Korean-Context Examples
 
-**질문**: "1990년 준공 30평대 아파트 6억. 재건축 기대로 샀는데 계속 갖고 있어야 하나?"
+**Question**: "A 30-pyeong apartment built in 1990, bought at 600M KRW expecting reconstruction. Should I keep holding it?"
 
-**HBU 분석**:
+**HBU Analysis**:
 
 *As Vacant*:
-- 용도지역: 일반주거 3종 (용적률 250%)
-- 대지지분 지분당 가치 추정
-- 신축 가능 세대수 계산 → 분양가 × 세대 − 공사비·기여금 = *개발 후 토지 가치*
+- Zoning: Class 3 general residential (FAR 250%)
+- Estimate value per lot-share
+- Calculate buildable unit count → sale price × units − construction cost and contributions = *post-development land value*
 
 *As Improved*:
-- 현재 아파트 가격 6억
-- 재건축 대기 "옵션 가치" 포함
-- 관리 상태, 분담금 예상
+- Current apartment price 600M KRW
+- Includes the "option value" of waiting for reconstruction
+- Management condition, expected contribution amount
 
-*비교*:
-- 만약 개발 후 가치 ≈ 현재 가격이면 → 재건축 기대가 이미 반영 → 업사이드 제한
-- 개발 후 가치 >> 현재 가격이면 → 보유 유리
-- 재건축 지연 리스크(10~15년) 시 할인율 적용 필요
+*Comparison*:
+- If post-development value ≈ current price → reconstruction expectation is already priced in → limited upside
+- If post-development value >> current price → holding is advantageous
+- A discount rate must be applied for reconstruction delay risk (10–15 years)
 
-**질문**: "역세권 3종 일반주거 꼬마빌딩, 지금 원룸 15세대 — 리모델링? 재건축? 준주거 상향?"
+**Question**: "A small building in Class 3 general residential near a subway station, currently 15 studio units — remodel? rebuild? or upzone to semi-residential?"
 
-**HBU 분석**:
-1. *법적*: 역세권 특례 준주거 상향 가능? 서울 기준 500% 용적률
-2. *물리*: 대지 50평, 접면도로 8m → 신축 타당
-3. *경제*:
-   - 현 NOI → 현 가치 (Cap Rate 역산)
-   - 신축 시 주상복합 NOI → 신축 후 가치
-   - 공사비·금융비·인허가 비용
-4. *수익성*: 3가지 옵션 NPV 비교 → 최유효이용 결정
+**HBU Analysis**:
+1. *Legal*: Is station-area special upzoning to semi-residential possible? Seoul basis: 500% FAR
+2. *Physical*: 50-pyeong lot, 8m frontage road → new construction is feasible
+3. *Economic*:
+   - Current NOI → current value (reverse-calculated by Cap Rate)
+   - NOI of new mixed-use residential → post-construction value
+   - Construction cost, financing cost, permit cost
+4. *Productivity*: Compare NPV across the three options → determine highest and best use
 
-## 한계
+## Limitations
 
-1. **규제 예측 어려움** — 용적률·용도 상향은 정치 이슈. 수년 대기도 허사될 수 있음.
-2. **시장 타이밍** — 개발 완료 시점 시장 상황 불확실.
-3. **건축비 변동성** — 최근 공사비 급등으로 사업성 뒤집힘 사례 다수.
-4. **조합·다수 소유주 문제** — 재건축은 1인 결정 아님. 동의율·분쟁.
-5. **최유효이용 ≠ 본인 최적** — 경제적 최대 가치지만 실거주 편의·세금·유동성 고려하면 다름.
-6. **한국 감정평가 관행** — 실제 감정가는 실거래가보다 보수적. HBU 이론값과 괴리.
+1. **Hard to forecast regulation** — FAR and use upzoning are political issues. Waiting for years may come to nothing.
+2. **Market timing** — Market conditions at the time of completion are uncertain.
+3. **Construction cost volatility** — Recent sharp rises in construction cost have flipped many projects' feasibility.
+4. **Association / multi-owner issues** — Reconstruction is not a one-person decision. Consent rates and disputes.
+5. **Highest and best use ≠ personal optimum** — It is the economically maximum value, but factoring in owner-occupancy convenience, taxes, and liquidity may lead to a different choice.
+6. **Korean appraisal practice** — Actual appraised values are more conservative than market transactions. Divergence from the theoretical HBU value.
 
-## 이 프레임워크가 *틀렸을 때*
+## When This Framework Is *Wrong*
 
-- 단지별 속성 가치 → `hedonic-pricing`
-- 수익형 정밀 평가 → `cap-rate-dcf`
-- 재건축 세부 경제학 → `redevelopment-feasibility`
-- 사이클 관점 → `harrison-cycle`
+- Complex-level attribute value → `hedonic-pricing`
+- Precise income-property valuation → `cap-rate-dcf`
+- Detailed reconstruction economics → `redevelopment-feasibility`
+- Cycle perspective → `harrison-cycle`
 
-## 추가 학습 자료
+## Additional Learning Resources
 
-- Appraisal Institute. *The Appraisal of Real Estate* (15th ed.) — HBU 정의·절차 표준.
-- 한국감정평가사협회. *감정평가 실무기준* — 최유효이용 조항.
-- 국내 실무: 지구단위계획 해석, 역세권 특례 용적률 가이드라인, 서울시 도시계획 조례.
+- Appraisal Institute. *The Appraisal of Real Estate* (15th ed.) — the standard for HBU definition and procedure.
+- Korea Association of Property Appraisers. *Appraisal Practice Standards* — the highest-and-best-use provisions.
+- Domestic practice: interpretation of district unit plans, station-area special FAR guidelines, Seoul Urban Planning Ordinance.

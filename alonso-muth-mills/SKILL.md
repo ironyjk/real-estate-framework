@@ -1,152 +1,152 @@
 ---
 name: alonso-muth-mills
 version: "0.1.0"
-description: "Alonso-Muth-Mills 입지론 — 도심 접근성과 주거비의 상충 관계를 bid-rent curve로 모델링. 왜 도심이 비싼가, 통근 시간 vs 집값 트레이드오프, GTX·지하철 개통이 가격에 미치는 영향 분석."
+description: "Alonso-Muth-Mills location theory — models the trade-off between downtown accessibility and housing cost via the bid-rent curve. Analyzes why downtown is expensive, commute time vs. home price trade-offs, and how GTX/subway openings affect prices."
 ---
 
 # Alonso-Muth-Mills Monocentric City Model
 
-## 한 줄 요약
+## One-Line Summary
 
-가구는 **통근비**와 **주거비**를 합친 총비용을 최소화한다. 그 결과 도심에서 멀수록 토지 가격이 낮아지는 **bid-rent curve**가 형성된다.
+Households minimize the total cost combining **commuting cost** and **housing cost**. The result is a **bid-rent curve** in which land prices decline with distance from downtown.
 
-## 이론 기원
+## Theoretical Origins
 
-- **Alonso, W. (1964)** — *Location and Land Use*. 원조.
-- **Muth, R. (1969)** — *Cities and Housing*. 주택 시장 적용.
-- **Mills, E. (1967, 1972)** — 도시 구조 실증 확장.
-- 도시경제학 표준 모형. 이후 Wheaton, Anas, Glaeser 등이 확장.
+- **Alonso, W. (1964)** — *Location and Land Use*. The original.
+- **Muth, R. (1969)** — *Cities and Housing*. Application to the housing market.
+- **Mills, E. (1967, 1972)** — Empirical extension to urban structure.
+- The standard model in urban economics. Later extended by Wheaton, Anas, Glaeser, and others.
 
-## 핵심 개념
+## Core Concepts
 
 ### 1. Bid-Rent Curve
 
-도심(CBD)에서 거리 $x$만큼 떨어진 곳의 토지 지불 의사:
+Willingness to pay for land at distance $x$ from the CBD (downtown):
 $$R(x) = R_0 - t \cdot x$$
 
-- $R_0$: CBD 토지가격
-- $t$: 거리당 통근비 (시간가치 포함)
-- 기울기 = *시간가치가 비싼 사람일수록 가파름*
+- $R_0$: CBD land price
+- $t$: commuting cost per unit distance (including time value)
+- Slope = *steeper for those with higher time value*
 
-### 2. 소득별 정렬
+### 2. Sorting by Income
 
-- 고소득·시간가치 높음 → 도심 집중, 가파른 bid-rent
-- 저소득·시간가치 낮음 → 교외, 완만한 bid-rent
-- **시장 청산**: 각 거리에서 가장 높은 지불의사자가 낙찰
+- High income · high time value → concentrates downtown, steep bid-rent
+- Low income · low time value → suburbs, gentle bid-rent
+- **Market clearing**: at each distance, the highest bidder wins
 
-### 3. 토지 → 주택 가격
+### 3. Land → Housing Price
 
-$P_\text{주택} \approx R \cdot \text{용적률} + $ 건축비
-→ 용적률 제약이 있으면 토지 희소성 ↑ → 도심 주택 가격 더 뛰어남
+$P_\text{housing} \approx R \cdot \text{floor area ratio} + $ construction cost
+→ If the floor area ratio is restricted, land scarcity ↑ → downtown housing prices rise further
 
-## 언제 쓰나
+## When to Use
 
-- "GTX 개통하면 이 지역 얼마나 오를까?" — 실질 $x$ 감소 효과
-- "재택근무 확산이 입지 가치에 미치는 영향?" — $t$ 감소 → bid-rent 완만화 → 교외 프리미엄
-- "강남 접근성이 왜 이렇게 비싼가?" — 다핵 구조에서 강남의 $R_0$
-- "지방 이전 시 입지 판단" — 지방 도시의 mini-CBD 구조
-- "신도시가 기존 도심을 대체할까?" — 다핵화 가설 검증
+- "If GTX opens, how much will this area rise?" — effect of a reduction in effective $x$
+- "How does the spread of remote work affect location value?" — $t$ falls → bid-rent flattens → suburban premium
+- "Why is Gangnam accessibility so expensive?" — $R_0$ of Gangnam in a polycentric structure
+- "How to judge location when relocating to a provincial city" — mini-CBD structure of regional cities
+- "Will new towns replace existing downtown?" — testing the polycentric hypothesis
 
-## 한국 시장 적용 포인트
+## Application Points for the Korean Market
 
-### 1. 한국은 Strict Monocentric 아님 — Polycentric 모델로 확장
+### 1. Korea Is Not Strictly Monocentric — Extend to a Polycentric Model
 
-- **서울 다핵**: 강남(GBC·테헤란로), 여의도(금융), 광화문(공공·대기업), 구로/가산(IT), 마곡(바이오), 판교(테크·벤처)
-- **Anas-Arnott-Small (1998)** 이론: 다핵 도시에서 각 고용 중심지 $j$마다 bid-rent 생성:
+- **Seoul's multiple cores**: Gangnam (GBC · Teheran-ro), Yeouido (finance), Gwanghwamun (public sector · large conglomerates), Guro/Gasan (IT), Magok (bio), Pangyo (tech · ventures)
+- **Anas-Arnott-Small (1998)** theory: In a polycentric city, each employment center $j$ generates its own bid-rent:
   $$R(x) = \max_j \left[ R_{0j} - t_j \cdot x_j \right]$$
-  (각 입지에서 *가장 가까운 or 가장 매력적인* CBD 기준으로 낙찰)
-- 각 핵별 bid-rent curve가 *중첩* → 교집합 지역이 초프리미엄
-- **Glaeser & Kahn (2004)** — 고용 분산 실증: 교외화(suburbanization)는 bid-rent 완만화의 현대적 현상
-- 결과: 강남·여의도·광화문 3축 접근성이 모두 좋은 한강라인이 초프리미엄. 판교 호황 이후 **신분당선·분당선 축**이 새로운 bid-rent 봉우리.
+  (at each location, bidding is based on the *nearest or most attractive* CBD)
+- Bid-rent curves from each core *overlap* → intersection areas become super-premium
+- **Glaeser & Kahn (2004)** — empirical study of employment dispersion: suburbanization is the modern phenomenon of bid-rent flattening
+- Result: the Han River line with good access to all three Gangnam · Yeouido · Gwanghwamun axes is super-premium. After the Pangyo boom, the **Shinbundang · Bundang line axis** has become a new bid-rent peak.
 
-### 1-1. 한국 특수: "학군 코어"가 제2의 CBD
+### 1-1. Korean Specificity: "School District Cores" Act as a Second CBD
 
-- 대치·목동·중계 등 학군 코어는 고용지 아니지만 *실효 $R_0$*를 생성
-- 학령기 자녀 있는 가구에겐 학군 핵이 고용 핵보다 bid-rent 높음
-- 2024~ 초저출산으로 **학군 프리미엄 장기 약화 가설** vs **소수 집중 → 강화** 논쟁 진행 중
+- School district cores such as Daechi, Mok-dong, and Junggye are not employment centers but generate an *effective $R_0$*
+- For families with school-age children, the school district core has a higher bid-rent than the employment core
+- Since 2024~, the ultra-low birth rate has triggered an ongoing debate between the **long-term weakening of the school district premium hypothesis** vs. **strengthening due to concentration among a smaller population**
 
-### 2. 지방 광역시는 Monocentric에 가까움
+### 2. Regional Metropolitan Cities Are Closer to Monocentric
 
-- 부산: 서면·해운대 2핵 구조
-- 대구: 수성구 중심 + 동성로
-- 울산: 남구·삼산·옥동 중심 + 울산과학대·현대중공업 고용지
-- **울산 범서 → 남구 이동은 전형적인 "외곽→CBD" 이동**
+- Busan: dual-core structure of Seomyeon and Haeundae
+- Daegu: Suseong-gu centered + Dongseongno
+- Ulsan: Nam-gu · Samsan · Okdong centered + Ulsan College of Science · Hyundai Heavy Industries employment zone
+- **A move from Beomseo in Ulsan to Nam-gu is a textbook "outskirts → CBD" move**
 
-### 3. 한국 특수 요인이 $R_0$를 흔든다
+### 3. Korea-Specific Factors That Shake $R_0$
 
-- **학군** — CBD와 무관하게 국지적 $R_0$ 생성 (목동·대치·중계)
-- **교통 허브 효과** — 강남역·홍대입구 등 환승역의 다리 프리미엄
-- **브랜드 타운** — 동일 입지라도 평판 좋은 단지가 미니 $R_0$ 형성
+- **School districts** — generate a local $R_0$ independent of the CBD (Mok-dong · Daechi · Junggye)
+- **Transit hub effects** — bridge premiums at transfer stations such as Gangnam Station and Hongik University Station
+- **Brand towns** — even at identical locations, well-regarded complexes form a mini-$R_0$
 
-### 4. $t$ 변화 요인
+### 4. Factors That Change $t$
 
-- **GTX (A/B/C)**: 수도권 외곽의 실질 거리 급감 → 동탄·운정·남양주 bid-rent 급등 기대
-- **재택근무**: $t$ 감소 → 교외 선호 → 미국·유럽에선 명확, 한국은 약함
-- **유가·대중교통 요금**: $t$ 소폭 변화
+- **GTX (A/B/C)**: sharp decline in effective distance for the outer metropolitan area → expected surge in bid-rent for Dongtan · Unjeong · Namyangju
+- **Remote work**: $t$ falls → suburban preference → clear in the US/Europe, weaker in Korea
+- **Oil prices · public transit fares**: minor changes in $t$
 
-### 5. 용적률 규제 = 수직 확장 제약
+### 5. Floor Area Ratio Regulation = Vertical Expansion Constraint
 
-도심 토지 희소성을 *인위적으로* 유지 → 가격 프리미엄 고착
+*Artificially* sustains downtown land scarcity → locks in price premium
 
-## 사용 절차
+## Usage Procedure
 
 ```
-1. 관련 CBD 식별
-   - 단일? 다핵? 각 핵의 $R_0$ 추정
-2. 통근 시간·비용 측정
-   - 집 → 각 CBD 소요 시간 (대중교통/자차)
-   - 시간가치 × 시간 = $t \cdot x$
-3. 대체 입지 비교
-   - 동일 통근 시간대 내 다른 동네들의 가격 분포
-   - 이상치(왜 저평가/고평가?)
-4. 충격 시나리오
-   - GTX 개통 후 $x_\text{실질}$ 변화
-   - 재택근무 정착 시 $t$ 변화
-5. 내 상황에 적용
-   - 통근 불필요(은퇴, 원격근무) → bid-rent 곡선 의미 약화
-   - 자녀 학령 → CBD 아닌 학군 핵이 중요
+1. Identify relevant CBDs
+   - Monocentric? Polycentric? Estimate $R_0$ for each core
+2. Measure commute time and cost
+   - Time from home → each CBD (public transit/private car)
+   - Value of time × time = $t \cdot x$
+3. Compare alternative locations
+   - Price distribution across neighborhoods within the same commute time band
+   - Outliers (why undervalued/overvalued?)
+4. Shock scenarios
+   - Change in effective $x$ after GTX opens
+   - Change in $t$ if remote work becomes entrenched
+5. Apply to your situation
+   - No commute needed (retirement, remote work) → bid-rent curve loses meaning
+   - School-age children → school district core matters more than CBD
 ```
 
-## 한국 맥락 예시
+## Korean Context Example
 
-**질문**: "울산에서 상급지 갈아타기 — 남구 삼산 vs 남구 옥동 vs 중구 구도심?"
+**Question**: "Upgrading location in Ulsan — Nam-gu Samsan vs. Nam-gu Okdong vs. Jung-gu old downtown?"
 
-**AMM 분석**:
+**AMM Analysis**:
 
-| 지역 | CBD 접근성 (남구 고용지) | 학군 핵 | 예상 $R_0$ 근접성 |
+| Area | CBD Accessibility (Nam-gu employment zone) | School District Core | Estimated Proximity to $R_0$ |
 |---|---|---|---|
-| 삼산 | ◎ 최근접 | ○ 평균 | 가장 높음 |
-| 옥동 | ○ 중간 | ◎ (울산 학군 1위) | 학군 프리미엄 포함 시 최고 |
-| 중구 구도심 | △ 원거리 | △ | 중간 (구도심 쇠퇴 반영) |
+| Samsan | ◎ Nearest | ○ Average | Highest |
+| Okdong | ○ Middle | ◎ (Ulsan school district #1) | Highest once school district premium is included |
+| Jung-gu old downtown | △ Far | △ | Middle (reflects old downtown decline) |
 
-*추가 고려*: 울산은 고용 구조가 현대중공업(동구)·정유(남구·울주)로 분산 → 엄밀한 monocentric 아님. 가족의 출근지 기준 $x$ 재계산 필요.
+*Additional consideration*: Ulsan's employment structure is dispersed across Hyundai Heavy Industries (Dong-gu) and petrochemicals (Nam-gu · Ulju) → not strictly monocentric. $x$ must be recalculated based on the family's commuting destination.
 
-**질문**: "GTX-A 동탄역 근처 — 지금 사는 게 맞나?"
+**Question**: "Near Dongtan Station on GTX-A — is buying now the right call?"
 
-**AMM 분석**:
-- 현재 $x$ (자차 강남 약 90분, 버스 100분)
-- 개통 후 $x$ (GTX 20분) → 실질 $x$ ~70% 감소
-- $t \cdot x$ 절감 → bid-rent 상승 → 가격 프리미엄 이미 반영됐는지 확인
-- 주의: 개통 지연, 배차 간격, 환승 부담은 "이론상 $x$"와 "체감 $x$" 괴리
+**AMM Analysis**:
+- Current $x$ (about 90 min to Gangnam by car, 100 min by bus)
+- $x$ after opening (20 min via GTX) → effective $x$ reduced by ~70%
+- Savings on $t \cdot x$ → bid-rent rises → check whether the price premium has already been priced in
+- Caveat: opening delays, headway intervals, and transfer burdens create a gap between "theoretical $x$" and "perceived $x$"
 
-## 한계
+## Limitations
 
-1. **다핵 현실과 괴리** — 원형 모델은 단일 CBD. 한국 현실과 안 맞음.
-2. **통근 중심 가정** — 은퇴자, 재택근로자, 자녀 없는 가구에 설명력 약함.
-3. **학군·환경 외생** — 학군 프리미엄이 CBD 접근성보다 크게 작용하는 경우 많음.
-4. **정책·교통 인프라 충격** — GTX 같은 대형 변화는 모형이 다루기 어려움 (발표·지연·개통 단계별 가격 반영).
-5. **심리적 거리 ≠ 물리적 거리** — "강남 생활권" 같은 브랜드 효과는 $x$에 안 담김.
+1. **Gap with polycentric reality** — the circular model assumes a single CBD. Does not fit Korean reality.
+2. **Commute-centric assumption** — weak explanatory power for retirees, remote workers, and households without children.
+3. **Exogenous school district · environment** — the school district premium often outweighs CBD accessibility.
+4. **Policy · transit infrastructure shocks** — major changes such as GTX are hard for the model to handle (price reflection across announcement · delay · opening stages).
+5. **Psychological distance ≠ physical distance** — brand effects such as "Gangnam lifestyle area" are not captured in $x$.
 
-## 이 프레임워크가 *틀렸을 때*
+## When This Framework Is *Wrong*
 
-- 학군·구조적 속성 분석 → `hedonic-pricing`
-- 단기 공급·수요 동학 → `dipasquale-wheaton`
-- 사이클 관점 → `harrison-cycle`
-- 재건축으로 입지 가치 재창출 → `redevelopment-feasibility` + `highest-best-use`
+- Analysis of school district · structural attributes → `hedonic-pricing`
+- Short-term supply · demand dynamics → `dipasquale-wheaton`
+- Cycle perspective → `harrison-cycle`
+- Re-creating location value via redevelopment → `redevelopment-feasibility` + `highest-best-use`
 
-## 추가 학습 자료
+## Further Reading
 
 - Alonso, W. (1964). *Location and Land Use.* Harvard University Press.
 - Muth, R. (1969). *Cities and Housing.* University of Chicago Press.
-- Glaeser, E. (2011). *Triumph of the City.* — 현대 확장.
-- 국내: 국토연구원 도시공간구조 리포트, 수도권 광역교통망 영향 분석.
+- Glaeser, E. (2011). *Triumph of the City.* — Modern extension.
+- Domestic: Korea Research Institute for Human Settlements urban spatial structure reports, metropolitan wide-area transportation network impact analyses.

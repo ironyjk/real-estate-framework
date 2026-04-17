@@ -1,245 +1,245 @@
 ---
 name: redevelopment-feasibility
 version: "0.1.0"
-description: "재건축/재개발 사업성 프레임워크 — 비례율·감정평가액·분담금·일반분양 구조 분석. 조합원 경제학, 단계별 리스크, 사업성 스크리닝. 한국 특수 제도."
+description: "Framework for analyzing reconstruction/redevelopment project feasibility — proration rate, appraisal value, contribution fees, and general sales structure. Union member economics, stage-by-stage risk, feasibility screening. Korea-specific regulatory system."
 ---
 
-# 재건축·재개발 사업성 분석
+# Reconstruction·Redevelopment Feasibility Analysis
 
-## 한 줄 요약
+## One-Line Summary
 
-재건축·재개발의 경제성 = **비례율 ≥ 100% 여부**와 **분담금 감당 가능성**으로 판단. 그 위에 *시간·시장·조합* 리스크를 얹는다.
+The economic viability of reconstruction·redevelopment is determined by **whether the proration rate is ≥ 100%** and **whether the contribution fee is affordable**. On top of that, layer in *time·market·union* risks.
 
-## 제도 개관
+## Regulatory Overview
 
-- **재건축**: 노후 *건축물* 철거·신축 (민간 정비사업). 안전진단 필수.
-- **재개발**: 노후 *지역* 전체 정비. 기반시설까지 재정비.
-- 근거법: 도시 및 주거환경정비법(도정법), 빈집 및 소규모주택 정비에 관한 특례법(소규모주택정비법).
+- **재건축 (Reconstruction)**: Demolition and new construction of aged *buildings* (private improvement project). Safety inspection required.
+- **재개발 (Redevelopment)**: Comprehensive improvement of an aged *area*. Includes redevelopment of infrastructure.
+- Governing laws: Act on the Improvement of Urban Areas and Residential Environments (도정법, the Improvement Act), and Act on Special Cases Concerning Vacant Houses and Small-Scale Housing Improvement (소규모주택정비법, Small-Scale Housing Improvement Act).
 
-## 핵심 지표
+## Key Metrics
 
-### 1. 비례율 (Proration Rate)
+### 1. Proration Rate (비례율)
 
-$$\text{비례율} = \frac{\text{종후자산평가액} - \text{총사업비}}{\text{종전자산평가액}} \times 100\%$$
+$$\text{Proration Rate} = \frac{\text{Post-Improvement Asset Appraisal Value} - \text{Total Project Cost}}{\text{Pre-Improvement Asset Appraisal Value}} \times 100\%$$
 
-- **종전자산평가액**: 조합원 현 자산가치 (감정평가 기준, 시세의 60~80%)
-- **종후자산평가액**: 신축 완료 후 조합원 분양가 합 + 일반분양 수익 − *임대주택·소형주택 감정 매입가* − *기부채납 상당액*
-- **총사업비**: 공사비 + 금융비 + 인허가·설계·감리 + 이주비 + 조합운영비 + 예비비 + *재초환 부담금(시나리오)*
+- **Pre-Improvement Asset Appraisal Value (종전자산평가액)**: Current asset value of union members (based on appraisal, typically 60–80% of market price)
+- **Post-Improvement Asset Appraisal Value (종후자산평가액)**: Sum of union member sales prices after completion + general sales revenue − *appraisal-based government purchase price of rental housing·small units* − *land contribution equivalent value*
+- **Total Project Cost (총사업비)**: Construction cost + financing cost + permits·design·supervision + relocation expenses + union operating expenses + contingency + *reconstruction excess profit recapture charge (scenario)*
 
-**해석**:
-- 100% = 손익분기
-- 120% = 조합원 자산이 20% 늘어남 (유리)
-- 80% = 조합원 자산 20% 줄어듬 (분담금 추가)
-- **실무 통념**: 110% 이상이면 "괜찮다", 130% 이상이면 "우량"
+**Interpretation**:
+- 100% = break-even
+- 120% = union member assets increase by 20% (favorable)
+- 80% = union member assets decrease by 20% (additional contribution fee)
+- **Industry rule of thumb**: "Acceptable" at 110% or higher, "excellent" at 130% or higher
 
-**실전 함정**:
-- 조합 홍보 자료의 비례율은 *시공사 최초 견적 + 분양가 낙관* 기준 → 착공 시점 재계산에서 10~30%p 하락 흔함
-- 관리처분인가 공람자료의 비례율이 *법적 기준*. 그 이후도 설계변경·공사비 증액으로 변동
-- 국공유지 무상귀속·유상매입, 도로·공원 등 기반시설 환입·신설 항목이 종후자산에서 차감됨 — 단순 "세대수 × 분양가"로 추정하면 과대
+**Practical Pitfalls**:
+- Proration rates in union promotional materials are based on *initial contractor estimates + optimistic sales prices* → 10–30 percentage point drops are common upon recalculation at construction start
+- The proration rate in the management disposition approval public inspection documents is the *legal standard*. It still fluctuates afterward due to design changes and construction cost increases
+- National·public land free transfers·paid acquisitions, and infrastructure facility reversions·additions (roads, parks, etc.) are deducted from post-improvement assets — simple "number of units × sales price" estimation leads to overestimation
 
-### 2. 분담금
+### 2. Contribution Fee (분담금)
 
-$$\text{분담금} = \text{신청 평형 분양가} - (\text{종전감정평가액} \times \text{비례율})$$
+$$\text{Contribution Fee} = \text{Sales Price for Requested Unit Size} - (\text{Pre-Improvement Appraisal Value} \times \text{Proration Rate})$$
 
-- 조합원이 *현금으로* 내야 하는 금액
-- 평형 상향 시 폭증
-- 사업비 증가·분양가 하락 시 증가
+- Amount union members must pay *in cash*
+- Surges sharply when upgrading to a larger unit
+- Increases when project costs rise or sales prices drop
 
-### 3. 조합원 분양가 vs 일반 분양가
+### 3. Union Member Sales Price vs General Sales Price
 
-- 조합원 분양가: 일반 분양가의 *70~85%* 수준 (제공 혜택)
-- 일반 분양가 높을수록 조합 수익↑ → 비례율↑
-- 분양가상한제 적용 시 일반 분양가 규제 → 비례율 악화
+- Union member sales price: *70–85%* of general sales price (benefit provided)
+- Higher general sales price → higher union revenue → higher proration rate
+- When the sales price cap (분양가상한제) applies, general sales prices are regulated → proration rate deteriorates
 
-### 4. 소형주택 의무 공급 (임대주택 포함)
+### 4. Mandatory Small Unit Supply (Including Rental Housing)
 
-- 일정 비율(지자체별) 임대주택 또는 소형 강제
-- 임대주택 → 감정가 기준 정부 매입. 수익성 제한 요인.
+- A certain percentage (by local government) of rental or small units is mandatory
+- Rental housing → purchased by the government at appraisal value. A limiting factor on profitability.
 
-## 단계별 프로세스와 가치 변화
+## Stage-by-Stage Process and Value Changes
 
-| 단계 | 소요 기간 | 가치 변화 | 리스크 |
+| Stage | Duration | Value Change | Risk |
 |---|---|---|---|
-| 1. 예정구역 지정 | - | 기대 가치 형성 (+) | 지정 취소 |
-| 2. 안전진단 | 6개월~2년 | D·E 판정 시 급등 | 판정 불발 |
-| 3. 정비구역 지정 | 1~2년 | 가치 본격 반영 | 지정 보류 |
-| 4. 조합 설립 | 1~2년 | 분담금 추정 구체화 | 동의율 미달 |
-| 5. 시공사 선정 | 6개월~1년 | 브랜드 프리미엄 | 시공사 파산·분쟁 |
-| 6. 사업시행인가 | 1~2년 | 사업성 확정 | 인가 보류 |
-| 7. 관리처분인가 | 1~2년 | 분담금 확정 | 소송·분쟁 |
-| 8. 이주·철거 | 1~2년 | 이주비·명도 이슈 | 알박기 |
-| 9. 착공·공사 | 3~5년 | 공사비 변동 노출 | 부실시공·지연 |
-| 10. 준공·입주 | - | 신축 프리미엄 실현 | 미분양 |
+| 1. Designation of Planned District | - | Expected value forms (+) | Designation cancellation |
+| 2. Safety Inspection | 6 months–2 years | Sharp rise upon D·E rating | Failure to obtain rating |
+| 3. Improvement District Designation | 1–2 years | Value fully reflected | Designation deferral |
+| 4. Union Establishment | 1–2 years | Contribution fee estimates concrete | Insufficient consent rate |
+| 5. Contractor Selection | 6 months–1 year | Brand premium | Contractor bankruptcy·dispute |
+| 6. Project Implementation Approval | 1–2 years | Feasibility confirmed | Approval deferral |
+| 7. Management Disposition Approval | 1–2 years | Contribution fee confirmed | Lawsuits·disputes |
+| 8. Relocation·Demolition | 1–2 years | Relocation cost·eviction issues | Holdout owners |
+| 9. Construction Start | 3–5 years | Exposure to construction cost changes | Defective construction·delays |
+| 10. Completion·Move-in | - | New building premium realized | Unsold units |
 
-**총 소요 10~15년**. 각 단계 지연이 누적.
+**Total duration: 10–15 years**. Delays at each stage accumulate.
 
-## 언제 쓰나
+## When to Use
 
-- 재건축 아파트 매수 판단
-- 조합원 분양권 vs 일반 매매 비교
-- 분담금 협상·이해
-- 재건축 지연·중단 리스크 평가
-- 용적률 완화·종상향 효과 추정
-- 재개발 구역 투자 스크리닝
+- Judging a reconstruction apartment purchase
+- Comparing union member sales rights vs general market purchase
+- Negotiating·understanding contribution fees
+- Assessing reconstruction delay·suspension risks
+- Estimating the effect of FAR relaxation·zoning upgrades
+- Screening redevelopment district investments
 
-## 한국 시장 적용 포인트
+## Korean Market Application Points
 
-### 1. 사업성 1차 스크리닝 체크리스트
+### 1. Primary Feasibility Screening Checklist
 
-- [ ] 용적률 여유 충분한가? (기존 150% → 상한 250~300%)
-- [ ] 대지지분 충분한가? (작을수록 분담금 상승)
-- [ ] 조합원 수 대비 일반분양 비율 적절한가?
-- [ ] 분양가상한제 적용지역인가?
-- [ ] 기부채납·임대주택 비율 얼마인가?
-- [ ] 시공사 견적 공사비 vs 현 시세
-- [ ] 인근 신축 분양가·시세 (종후자산 추정)
+- [ ] Is there sufficient FAR headroom? (existing 150% → cap 250–300%)
+- [ ] Is the land share (대지지분) sufficient? (smaller share = higher contribution fee)
+- [ ] Is the ratio of general sales to union members appropriate?
+- [ ] Is it in an area where the sales price cap applies?
+- [ ] What is the land contribution·rental housing ratio?
+- [ ] Contractor's quoted construction cost vs current market rate
+- [ ] Nearby new construction sales prices·market rates (for estimating post-improvement assets)
 
-### 2. 종상향·특례의 가치
+### 2. Value of Zoning Upgrades·Special Cases
 
-- **1종→2종**: 용적률 150→200% → 세대수↑ → 일반분양 수익↑
-- **2종→3종**: 200→250% → 동일 효과
-- **역세권 특례**: 최대 700%까지 상향 (공공기여 조건)
-- 정치·행정 의존도 높음 → 확정 전 할인 필수
+- **Class 1→Class 2**: FAR 150→200% → more units → higher general sales revenue
+- **Class 2→Class 3**: 200→250% → same effect
+- **Station-area special case**: Upgrade up to 700% (conditional on public contribution)
+- Highly dependent on political·administrative factors → discounting before confirmation is essential
 
-### 3. 공사비 급등 리스크 (2022~2026)
+### 3. Construction Cost Surge Risk (2022–2026)
 
-- 2020~2024 공사비 약 40~60% 상승 (철근·시멘트·인건비)
-- **2026년 4월 기준 평당 공사비 현실치** (브랜드 단지):
-  - 수도권 일반 아파트 700~850만원/평
-  - 하이엔드(디에이치·아크로) 900~1,100만원/평
-  - 주상복합·고층 1,000만원/평 이상
-- 기존 시공계약 재협상 빈발 → 비례율 악화
-- *이미 관리처분 받은 구역도* 재계산 사례 (둔촌주공·반포1단지 3주구 등)
-- **조합원 고지 공사비와 실제 착공 시 공사비 괴리 평균 20~40%** 가정이 안전
+- Construction costs rose approximately 40–60% from 2020–2024 (rebar, cement, labor)
+- **Realistic per-pyeong construction cost as of April 2026** (brand apartments):
+  - General apartments in the metropolitan area: 7–8.5 million KRW/pyeong
+  - High-end (The H, Acro): 9–11 million KRW/pyeong
+  - Mixed-use·high-rise: over 10 million KRW/pyeong
+- Frequent renegotiation of existing construction contracts → deteriorating proration rates
+- Cases of recalculation *even in districts that have already received management disposition approval* (Dunchon Jugong, Banpo Jugong 1-danji Block 3, etc.)
+- **Safer to assume an average 20–40% gap between the construction cost communicated to union members and the actual cost at construction start**
 
-### 3-1. 재건축초과이익환수제(재초환)
+### 3-1. Reconstruction Excess Profit Recapture (재초환)
 
-- 2006 도입, 2018 시행, 2024 개정으로 면제 기준 3천만원→8천만원, 부담률 완화
-- 2026.4 현재 **유예·폐지 논의 지속**. 정치 상황 따라 변동 — 비례율 계산 시 *재초환 시나리오 2가지 병행* 권장
-- 부담금 구간: 조합원당 초과이익 8천~2.8억 구간 누진 (2024 개정 기준)
-- 강남·여의도·한남 등 고수익 재건축에서 분담금 외 *별도 세금 충격*
+- Introduced in 2006, enforced in 2018, amended in 2024 — exemption threshold raised from 30 million KRW to 80 million KRW, with relaxed charge rates
+- As of April 2026, **suspension·abolition discussions continue**. Varies with political circumstances — recommend running *two parallel scenarios for the recapture charge* when calculating the proration rate
+- Charge brackets: progressive tax on per-member excess profit of 80 million–280 million KRW (based on 2024 amendment)
+- In high-profit reconstruction projects in Gangnam, Yeouido, and Hannam, this represents a *separate tax shock beyond the contribution fee*
 
-### 4. 분양가상한제와의 상호작용
+### 4. Interaction with the Sales Price Cap
 
-- 적용 시: 일반분양가 규제 → 조합 수익↓ → 비례율↓ → 분담금↑
-- 조합원은 "프리미엄 상실" 느낌
-- 단기 후분양·HUG 고분양가 규제도 영향
+- When applied: general sales prices regulated → union revenue↓ → proration rate↓ → contribution fee↑
+- Union members feel a "loss of premium"
+- Short-term post-sale and HUG high-price regulations also have impact
 
-### 5. 재개발 추가 고려
+### 5. Additional Considerations for Redevelopment
 
-- 토지등 소유자 + 국공유지 + 무허가건물 복잡
-- 기반시설 부담 큼 → 사업비 상승
-- 구역 내부 이질성 → 분쟁 빈도 높음
-- 입체환지·현금청산 옵션
+- Complex mix of landowners + national·public land + unauthorized buildings
+- Heavy infrastructure burden → rising project costs
+- Internal heterogeneity within the district → high frequency of disputes
+- Options for volumetric land exchange·cash liquidation
 
-### 6. 소규모주택정비사업 (가로주택정비·자율주택정비)
+### 6. Small-Scale Housing Improvement Projects (Street Housing Improvement·Autonomous Housing Improvement)
 
-- 소규모 단지 (20~200세대)
-- 절차 간소화, 5~8년으로 단축
-- 용적률 완화·건축기준 완화 혜택
-- 사업성은 제한적이나 빠른 현금화 가능
+- Small-scale complexes (20–200 units)
+- Simplified procedures, shortened to 5–8 years
+- Benefits of FAR relaxation·relaxed building standards
+- Limited feasibility but allows rapid liquidation
 
-### 7. 1기 신도시 특별법 (노후계획도시정비법, 2024.4 시행)
+### 7. Phase 1 New Town Special Act (Aged Planned City Improvement Act, enforced April 2024)
 
-- 적용 대상: **분당·일산·평촌·산본·중동 + 수도권·광역시 100만㎡ 이상 택지** (20년 이상)
-- 핵심 인센티브:
-  - 용적률 상향: 기존 150~200% → **최대 500%** (종상향·재정비)
-  - 안전진단 완화·면제
-  - 통합 재건축 (여러 단지 묶음) 허용
-  - 선도지구 지정 → 절차 단축
-- 2025~2026 선도지구 지정 진행 중. 비선도지구는 10~15년 대기 가능성
-- **주의**: 특별법 혜택은 "공공기여" 조건부 — 기여 비율(임대·기반시설) 크면 실질 용적률 인센티브 상쇄
-- 분당·일산 등 매물 분석 시 **특별법 적용 시나리오 vs 일반 재건축 시나리오 분리** 필요
+- Applicable to: **Bundang·Ilsan·Pyeongchon·Sanbon·Jungdong + metropolitan area·major city housing sites of 1,000,000㎡ or more** (20 years or older)
+- Key incentives:
+  - FAR upgrade: existing 150–200% → **up to 500%** (zoning upgrade·reorganization)
+  - Relaxation·exemption from safety inspection
+  - Integrated reconstruction (bundling multiple complexes) allowed
+  - Designation of pioneer districts → shortened procedures
+- Pioneer district designation in progress during 2025–2026. Non-pioneer districts may face 10–15 year waits
+- **Note**: Special Act benefits are conditional on "public contribution" — if the contribution ratio (rental·infrastructure) is large, the effective FAR incentive is offset
+- When analyzing properties in Bundang·Ilsan, etc., it is necessary to **separate the Special Act application scenario vs the general reconstruction scenario**
 
-## 사용 절차
+## Usage Procedure
 
 ```
-1. 단계 위치 파악
-   - 현재 몇 단계? 다음 단계까지 예상 기간
-2. 비례율 추정
-   - 종전자산평가액 = 현 시세의 60~80% (보수적)
-   - 종후자산평가액 = 인근 신축 분양가 × 세대수 (일반분양) + 조합원 분양가 × 세대수
-     ※ 임대주택 감정매입분·기부채납·기반시설 차감
-   - 총사업비 = 공사비 (평당 공사비 × 연면적) + 사업비 + 재초환 시나리오
-3. 분담금 시나리오
-   - 평형 유지 / 상향
-   - 분양가상한제 적용 / 비적용
-   - 공사비 ±20% 민감도
-4. 시간가치 할인
-   - 10년 할인율 5% → 0.61
-   - 기대수익을 현재가치로 환산
-5. 리스크 조정
-   - 지연 확률 × 지연 비용
-   - 사업 중단 확률 × 매몰비용
+1. Identify current stage
+   - What stage now? Expected duration until next stage
+2. Estimate proration rate
+   - Pre-improvement asset appraisal value = 60–80% of current market price (conservative)
+   - Post-improvement asset appraisal value = nearby new construction sales price × units (general sale) + union member sales price × units
+     ※ Deduct appraisal-based purchases of rental housing·land contributions·infrastructure
+   - Total project cost = construction cost (per-pyeong cost × gross floor area) + project cost + recapture charge scenario
+3. Contribution fee scenario
+   - Maintain unit size / upgrade
+   - With/without sales price cap
+   - ±20% sensitivity on construction cost
+4. Discount for time value
+   - 10-year discount rate of 5% → 0.61
+   - Convert expected returns to present value
+5. Risk adjustment
+   - Probability of delay × delay cost
+   - Probability of project suspension × sunk cost
 ```
 
-## 매수 전 실사 체크리스트 (임장·서류)
+## Pre-Purchase Due Diligence Checklist (Site Visit·Documents)
 
-### 서류 확인
-- [ ] **관리처분계획서 공람자료** (관리처분인가 단계 이후 매물) — 조합원 개별 분담금·종전감정가 명시
-- [ ] **조합 정관·총회 의사록** 최근 3~5년치 — 분쟁 이력, 의결 가결률 추이
-- [ ] **시공사 도급계약서 공사비 단가·증액 조항** — 대물변제·물가변동 조항 주의
-- [ ] **사업시행계획서** (사업시행인가 이후) — 세대수·평형별 배분·임대주택 비율
-- [ ] **감정평가서** 요약본 열람 (종전자산 평가 근거)
-- [ ] 해당 필지 **토지이용계획확인원** — 용도지역·지구단위계획
-- [ ] **등기부등본** 갑·을구 전체 — 조합 설립 전이면 소유권·근저당·가처분 이력
+### Document Review
+- [ ] **Management disposition plan public inspection documents** (for properties after the management disposition approval stage) — specifies individual union member contribution fees·pre-improvement appraisal value
+- [ ] **Union bylaws·general meeting minutes** from the last 3–5 years — history of disputes, trends in approval rates
+- [ ] **Contractor construction contract, cost unit prices·increase clauses** — watch for in-kind payment·price fluctuation clauses
+- [ ] **Project implementation plan** (after implementation approval) — number of units, allocation by unit size, rental housing ratio
+- [ ] **Appraisal report** summary review (basis for pre-improvement asset valuation)
+- [ ] **Land use planning certificate** for the relevant parcel — zoning·district unit plan
+- [ ] **Property registry** full Gap·Eul sections — if before union establishment, history of ownership·mortgages·provisional injunctions
 
-### 임장 확인
-- [ ] 재건축 반대 현수막·조합 내분 상황 (관리사무소·상가·주변 부동산 탐문)
-- [ ] 상가 조합원 이견 (상가와 주택 이해 상충 흔함)
-- [ ] 알박기·명도 소송 이력 (특히 재개발)
-- [ ] 인접 단지 경쟁 재건축 진행 속도 (동시 분양 시 일반분양가 하락 압력)
-- [ ] 학교·공원 등 기반시설 부지 유무 (기부채납 부담)
+### Site Visit Review
+- [ ] Anti-reconstruction banners·union internal conflict status (inquire at management office·retail stores·nearby real estate offices)
+- [ ] Disagreements from commercial union members (conflicts between commercial and residential interests are common)
+- [ ] History of holdout owners·eviction lawsuits (especially in redevelopment)
+- [ ] Progress speed of competing reconstructions in adjacent complexes (downward pressure on general sales prices if sold simultaneously)
+- [ ] Presence of sites for infrastructure such as schools·parks (land contribution burden)
 
-### 조합원 자격 리스크
-- [ ] 매도인의 **조합원 자격 승계 가능 여부** (1+1 분양, 재당첨 제한, 투기과열지구 5년 전매제한)
-- [ ] 2003년 이후 투기과열지구 내 조합원 지위 양도 제한 (재건축), 관리처분인가 후 제한 (재개발)
-- [ ] 다물권자·다주택자 감액 대상 여부
-- [ ] **입주권 vs 분양권 구분**: 세법·대출·청약 자격 완전히 다름
+### Union Member Qualification Risk
+- [ ] Seller's **eligibility to transfer union membership** (1+1 sale, redemption restrictions, 5-year resale restriction in overheated speculation zones)
+- [ ] Since 2003, restrictions on transfer of union member status in overheated speculation zones (reconstruction), and restrictions after management disposition approval (redevelopment)
+- [ ] Whether subject to reduction as multi-property·multi-home owner
+- [ ] **Distinction between move-in rights (입주권) vs sales rights (분양권)**: tax law·loans·subscription (청약) eligibility are completely different
 
-## 한국 맥락 예시
+## Korean Context Example
 
-**질문**: "강남 OO아파트 재건축 예정. 15억. 재건축 후 20억 예상. 살까?"
+**Question**: "An apartment in Gangnam is planned for reconstruction. 1.5 billion KRW. Expected to be 2 billion KRW after reconstruction. Should I buy?"
 
-**간단 분석**:
-- 시간 가정: 10년 소요
-- 개발 후 가치 20억 - 분담금 3억(추정) = 17억 순 가치
-- 10년 할인 (5%/년): 17억 × 0.61 = **10.4억**
-- 현재 대가 15억 vs PV 10.4억 → **4.6억 프리미엄 선지급**
+**Simple Analysis**:
+- Time assumption: 10 years
+- Post-development value 2 billion - estimated 300 million contribution fee = 1.7 billion net value
+- 10-year discount (5%/year): 1.7 billion × 0.61 = **1.04 billion**
+- Current price of 1.5 billion vs PV of 1.04 billion → **460 million premium paid upfront**
 
-→ *가격에 이미 재건축 기대 반영*. 추가 상승 여력 제한.
-**체크 포인트**: 20억 추정 보수적인가? 5%가 아닌 3% 할인 타당? 평형 상향 시 분담금 증가는?
-**대안**: 재건축 후반 단계 매물(분양권 직전)이 타이밍 좋을 수 있음 (지연 리스크 감소분 실현).
+→ *Reconstruction expectations are already priced in*. Limited additional upside.
+**Checkpoints**: Is the 2 billion estimate conservative? Is a 3% discount more valid than 5%? What about the increased contribution fee when upgrading unit size?
+**Alternative**: Properties in the late reconstruction stage (just before sales rights) may have better timing (realizing reduced delay risk).
 
-**질문**: "재개발 초기 단계 매물 — 사야 하나?"
+**Question**: "Early-stage redevelopment property — should I buy?"
 
-**분석**:
-- 초기(예정구역·안전진단)는 기대만 반영, 확정 전
-- 지연·무산 리스크 30~50%
-- 기대수익 × (1 - 리스크) × 시간할인
-- 사업성 지표(용적률·대지지분·조합원 구성) 확인 필수
-- *변수 많음 → 분산 매수 또는 후반 단계 선호*
+**Analysis**:
+- Early stages (planned district·safety inspection) reflect only expectations, not confirmed
+- 30–50% risk of delay·cancellation
+- Expected return × (1 - risk) × time discount
+- Essential to verify feasibility indicators (FAR·land share·union member composition)
+- *Many variables → diversify purchases or prefer late-stage properties*
 
-## 한계
+## Limitations
 
-1. **숫자가 움직인다** — 비례율·분담금은 공사비·분양가 따라 계속 변경.
-2. **조합 정치** — 동의율·분쟁이 경제학보다 중요한 순간 있음.
-3. **공사비 예측 난이도** — 원자재·인건비·금융비 급변.
-4. **규제 변동** — 용적률·분양가상한제·임대주택 비율이 정권 따라 변경.
-5. **시간가치** — 10~15년은 긴 시간. 기회비용·생활 변화 반영 어려움.
-6. **조합원 vs 매수자 정보 비대칭** — 외부 매수자는 내부 사정·분쟁을 알기 어려움.
-7. **승자의 저주** — 잘 된 재건축만 언론에 나옴. 실패·중단 사례 체계적 무시.
+1. **The numbers move** — proration rates·contribution fees constantly change with construction costs·sales prices.
+2. **Union politics** — there are moments when consent rates·disputes matter more than economics.
+3. **Difficulty predicting construction costs** — raw materials·labor·financing costs change rapidly.
+4. **Regulatory volatility** — FAR·sales price cap·rental housing ratios change with each administration.
+5. **Time value** — 10–15 years is a long time. Difficult to account for opportunity cost·life changes.
+6. **Information asymmetry between union members vs buyers** — outside buyers find it difficult to know internal affairs·disputes.
+7. **Winner's curse** — only successful reconstructions appear in the media. Cases of failure·suspension are systematically ignored.
 
-## 이 프레임워크가 *틀렸을 때*
+## When This Framework Is *Wrong*
 
-- 재건축 기대 미반영 저평가 매물 찾기 → `hedonic-pricing`
-- 용도 전환이 재건축보다 유리한가 → `highest-best-use`
-- 타이밍 관점 → `harrison-cycle`
-- 전반적 공급 환경 → `dipasquale-wheaton`
+- Looking for undervalued properties where reconstruction expectations aren't priced in → `hedonic-pricing`
+- Whether use conversion is more favorable than reconstruction → `highest-best-use`
+- From a timing perspective → `harrison-cycle`
+- Overall supply environment → `dipasquale-wheaton`
 
-## 추가 학습 자료
+## Additional Learning Resources
 
-- 도시 및 주거환경정비법 (도정법) — 원문 필수.
-- 국토교통부 정비사업 가이드, 서울시 정비사업 통합홈페이지.
-- 실무: 조합 정관·관리처분계획서 공개 자료, 정비사업 전문 변호사·회계사 보고서.
-- **주의**: 조합·시공사 홍보자료는 낙관 편향. 관리처분 공람자료·감사보고서 기준으로 판단.
+- Act on the Improvement of Urban Areas and Residential Environments (도정법) — the original text is essential.
+- Ministry of Land, Infrastructure and Transport Improvement Project Guide, Seoul Improvement Project Integrated Homepage.
+- Practical materials: union bylaws·management disposition plan public documents, reports by attorneys·accountants specializing in improvement projects.
+- **Note**: Promotional materials from unions·contractors have optimism bias. Judge based on management disposition public inspection documents·audit reports.
