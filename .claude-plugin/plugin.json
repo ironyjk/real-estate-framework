@@ -1,0 +1,24 @@
+{
+  "name": "real-estate-framework",
+  "description": "Korean real estate decision meta-router — 9 frameworks (Hedonic Pricing, DiPasquale-Wheaton, Alonso-Muth-Mills, Cap Rate/DCF, Harrison 18.6-year cycle, Highest & Best Use, Redevelopment Feasibility, Korean Subscription Points, Gap Investment). Built on Korean real estate regime (jeonse, HUG insurance, redevelopment). NOT real estate advice. Invoke /realty.",
+  "version": "0.2.0",
+  "author": {
+    "name": "Choi Hee Chul",
+    "email": "ironyjk@gmail.com"
+  },
+  "homepage": "https://github.com/ironyjk/real-estate-framework",
+  "repository": "https://github.com/ironyjk/real-estate-framework",
+  "license": "CC-BY-NC-4.0",
+  "keywords": ["real-estate", "korean", "jeonse", "hedonic", "harrison-cycle", "redevelopment"],
+  "skills": [
+    "./alonso-muth-mills",
+    "./cap-rate-dcf",
+    "./dipasquale-wheaton",
+    "./gap-investment",
+    "./harrison-cycle",
+    "./hedonic-pricing",
+    "./highest-best-use",
+    "./redevelopment-feasibility",
+    "./subscription-points"
+  ]
+}
