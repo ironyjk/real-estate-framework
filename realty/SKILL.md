@@ -4,7 +4,7 @@ version: "0.2.0"
 last_verified: "2026-04-17"
 valid_until: "2026-10-17"
 description: "Korean real estate meta-router — classifies the situation and auto-selects one or more of 9 frameworks (academic theory, investment analysis, Korean regulatory) to aid decision-making. Covers home upgrade, purchase, subscription (청약), redevelopment, gap investment, and commercial analysis. 2026-04-17 baseline."
-tools: ["Read", "Write", "Edit", "Skill"]
+tools: ["Read", "Write", "Edit", "Skill", "Bash", "Agent"]
 dependencies:
   - hedonic-pricing
   - dipasquale-wheaton
@@ -183,3 +183,11 @@ Real estate decisions often need broader context:
 - **If no numbers, ask for numbers** — complex name, unit size, list price, jeonse, deposit, monthly rent: the more specific the better.
 - **Don't push transactions** — this skill aids judgment, don't steer toward a "buy/sell" conclusion.
 - **Verify with 2026-04 regulatory baseline**; tag volatile rules explicitly.
+
+## Execution Strategy
+
+When a framework requires deeper analysis (e.g., DCF valuation, proration rate calculation, gap investment stress test):
+
+1. **Use Bash** for numerical calculations — Python one-liners for NOI/Cap Rate, contribution fee scenarios, after-tax ROE
+2. **Use Agent** for parallel framework analysis — dispatch sub-analyses when combining Micro+Meso+Macro frameworks
+3. **Read sub-skill references** — each sub-skill has `references/foundation.md` with theory; load only when the user needs theoretical depth
